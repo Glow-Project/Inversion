@@ -23,9 +23,14 @@ A game for the Godot wild jam
 - win a game by invert images/something?
 - player has a bad-werwolveish-side that harms people around and turn them into enemies, player has to handle the
   anger and keep everything in balance
-- 
+
+![grafik](https://user-images.githubusercontent.com/4608045/141593592-4314a9c9-19a6-4434-9188-961a4ebf56f8.png)
+
 
 ### Pantent troll
+
+Don't be creative, honest, good but capitalistic, money-oriented and GET RICH!
+
 - sue people for their inventions, win lawsuits
 - buy good patents, sell bad ones
 - open source patents to get higher karma
