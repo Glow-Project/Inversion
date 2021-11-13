@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BahamaVibeMusic.mp3-266236a9c5468d8679390058cdb58811.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/BahamaVibeMusic.mp3"
+dest_files=[ "res://.import/BahamaVibeMusic.mp3-266236a9c5468d8679390058cdb58811.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

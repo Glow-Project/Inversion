@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SadMusic.mp3-12d7aca2d305cde23017ffb228583038.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/SadMusic.mp3"
+dest_files=[ "res://.import/SadMusic.mp3-12d7aca2d305cde23017ffb228583038.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
