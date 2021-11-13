@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "Patent",
+"language": "GDScript",
+"path": "res://entities/patent/Patent.gd"
+}, {
 "base": "Node",
 "class": "Settings",
 "language": "GDScript",
 "path": "res://addons/SettingsManager/Settings.gd"
 } ]
 _global_script_class_icons={
+"Patent": "",
 "Settings": ""
 }
 
