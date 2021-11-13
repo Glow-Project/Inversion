@@ -23,6 +23,19 @@ _global_script_class_icons={
 config/name="Inversion"
 config/icon="res://icon.png"
 
+[autoload]
+
+settings="*res://scripts/InitSettings.gd"
+
+[display]
+
+window/size/width=320
+window/size/height=160
+window/size/test_width=1020
+window/size/test_height=510
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [physics]
 
 common/enable_pause_aware_picking=true

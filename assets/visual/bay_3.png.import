@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bay_1.png-f1089643cfd9acacf31ef80aeddf717a.stex"
+path="res://.import/bay_3.png-a26e270b79efb5bfec4f6cc8e6ba7d5e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/bay_1.png"
-dest_files=[ "res://.import/bay_1.png-f1089643cfd9acacf31ef80aeddf717a.stex" ]
+source_file="res://assets/visual/bay_3.png"
+dest_files=[ "res://.import/bay_3.png-a26e270b79efb5bfec4f6cc8e6ba7d5e.stex" ]
 
 [params]
 

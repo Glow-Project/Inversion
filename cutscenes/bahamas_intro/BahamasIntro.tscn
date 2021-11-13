@@ -1,11 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://cutscenes/bahamas_intro/BahamasIntro.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/voice/JobCallForBahamas.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/visual/bay_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/visual/bay_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/visual/bay_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/visual/SimpleBanana.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "bahamas_intro"
 length = 30.0
+step = 0.01
 tracks/0/type = "audio"
 tracks/0/path = NodePath("MainAudio")
 tracks/0/interp = 1
@@ -17,8 +25,12 @@ tracks/0/keys = {
 "end_offset": 0.0,
 "start_offset": 0.0,
 "stream": ExtResource( 2 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 3 )
 } ],
-"times": PoolRealArray( 0 )
+"times": PoolRealArray( 0, 9 )
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
@@ -27,18 +39,141 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0.1, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("BahamaImages/Bahamas2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 11.5, 12.3, 14, 14.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BahamaImages/Bahamas1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 11.5, 12.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BahamaImages/Bahamas3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 14.1, 14.9, 16.5, 17.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BahamaImages/Bahamas4:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 16.5, 17.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Titel:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 18.49, 18.72, 18.94 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "Ba", "Baha", "Bahama" ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Banana:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 19.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
 
 [node name="BahamasIntro" type="Node2D"]
 modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 1 )
 
 [node name="MainAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/bahamas_intro = SubResource( 1 )
+
+[node name="BahamaImages" type="Node2D" parent="."]
+
+[node name="Bahamas1" type="Sprite" parent="BahamaImages"]
+position = Vector2( 161.073, 79.9147 )
+scale = Vector2( 1.07483, 0.83362 )
+texture = ExtResource( 4 )
+
+[node name="Bahamas2" type="Sprite" parent="BahamaImages"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 159.512, 79.9377 )
+scale = Vector2( 1.07109, 0.830011 )
+texture = ExtResource( 5 )
+
+[node name="Bahamas3" type="Sprite" parent="BahamaImages"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 161.435, 79.6769 )
+scale = Vector2( 4.86048, 3.14524 )
+texture = ExtResource( 6 )
+
+[node name="Bahamas4" type="Sprite" parent="BahamaImages"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 162.921, 82.0553 )
+scale = Vector2( 6.82216, 4.60065 )
+texture = ExtResource( 7 )
+
+[node name="Titel" type="Label" parent="."]
+margin_left = 35.0
+margin_top = 65.0
+margin_right = 96.0
+margin_bottom = 78.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.552941, 0.313726, 0, 1 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Banana" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 0.819608, 0.588235, 1 )
+position = Vector2( 251.661, 78.9386 )
+scale = Vector2( 4.42447, 3.95818 )
+texture = ExtResource( 9 )
