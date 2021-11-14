@@ -44,7 +44,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1, 8, 9, 10, 11, 18.1, 19, 20, 21, 36.2, 37.6 ),
+"times": PoolRealArray( 0, 1, 8, 9, 10, 11, 18.1, 19, 20, 21, 36.2, 37.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
@@ -95,7 +95,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 12 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ "Your are 
+"values": [ "You are 
 working
 in an
 open-source 
@@ -159,7 +159,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( -3.7, 35, 35.6, 37 ),
+"times": PoolRealArray( -3.7, 35, 35.2, 36.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 163.5, 222.34 ), Vector2( 163.5, 222.34 ), Vector2( 165.075, 45.951 ), Vector2( 164.76, 67.0547 ) ]
@@ -171,8 +171,8 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 35, 37, 37.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 35.1, 36.6, 37.1 ),
+"transitions": PoolRealArray( 1, 0.15932, 1 ),
 "update": 0,
 "values": [ Vector2( 0.25, 0.25 ), Vector2( 0.25, 0.25 ), Vector2( 1.5, 1.5 ) ]
 }
@@ -195,6 +195,11 @@ region = Rect2( 192, 136, 16, 17 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "sad",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 2 ), SubResource( 3 ) ],
 "loop": false,
 "name": "init_angry",
@@ -204,11 +209,6 @@ animations = [ {
 "loop": true,
 "name": "angry",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "sad",
-"speed": 5.0
 } ]
 
 [sub_resource type="DynamicFont" id=7]
@@ -217,7 +217,6 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [node name="OfficeIntro" type="Node2D"]
-modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -239,11 +238,10 @@ position = Vector2( 0.218582, 32.3449 )
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="Emotion" type="AnimatedSprite" parent="Sprites"]
-visible = false
 modulate = Color( 0.392157, 0.392157, 0.392157, 1 )
 position = Vector2( 171.897, 57.6226 )
 frames = SubResource( 6 )
-animation = "angry"
+animation = "sad"
 playing = true
 
 [node name="ReverseCard" type="Sprite" parent="Sprites"]
@@ -253,23 +251,22 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 67.8788, 160.168 )
+position = Vector2( 164.948, 63.7553 )
 current = true
-zoom = Vector2( 0.25, 0.25 )
+zoom = Vector2( 0.4, 0.4 )
 
 [node name="IntroductionText" type="Label" parent="Camera2D"]
-modulate = Color( 0, 0, 0, 0 )
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -38.0
 margin_top = -15.0
 margin_right = 115.0
 margin_bottom = 50.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = SubResource( 7 )
-text = "Your are 
-working
-in an
-open-source 
-company"
+text = "You are not
+getting paid
+for your
+hard work"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

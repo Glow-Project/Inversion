@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "Invention",
+"language": "GDScript",
+"path": "res://entities/invention/Invention.gd"
+}, {
+"base": "Node2D",
 "class": "Patent",
 "language": "GDScript",
 "path": "res://entities/patent/Patent.gd"
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://addons/SettingsManager/Settings.gd"
 } ]
 _global_script_class_icons={
+"Invention": "",
 "Patent": "",
 "Settings": ""
 }
@@ -32,6 +38,9 @@ config/icon="res://icon.png"
 [autoload]
 
 settings="*res://scripts/InitSettings.gd"
+global="*res://scripts/Global.gd"
+invention_collection="*res://entities/invention_collection/InventionCollection.tscn"
+patent_collection="*res://entities/patent_collection/PatentCollection.tscn"
 
 [display]
 
@@ -41,6 +50,14 @@ window/size/test_width=1020
 window/size/test_height=510
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[input]
+
+skip={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 

@@ -11,6 +11,11 @@ func _enter_tree():
 
 	adapt_settings()
 
+# Override `sets` function to instantly adapt settings
+func sets(setting, value):
+	.sets(setting, value)
+	adapt_settings()
+
 # Adapt the settings
 # For e.g. set the fullscreen
 func adapt_settings():
