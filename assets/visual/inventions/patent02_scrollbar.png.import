@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/patent03_camera.png-0727b0f1f9e7561a14ace0b3821b2a02.stex"
+path="res://.import/patent02_scrollbar.png-ef21253e36e890d766cd5d2d33d86ef8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/inventions/patent03_camera.png"
-dest_files=[ "res://.import/patent03_camera.png-0727b0f1f9e7561a14ace0b3821b2a02.stex" ]
+source_file="res://assets/visual/inventions/patent02_scrollbar.png"
+dest_files=[ "res://.import/patent02_scrollbar.png-ef21253e36e890d766cd5d2d33d86ef8.stex" ]
 
 [params]
 
@@ -20,11 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-<<<<<<< HEAD
 flags/filter=true
-=======
-flags/filter=false
->>>>>>> 51b37c6 (add shop app)
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

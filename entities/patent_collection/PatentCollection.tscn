@@ -1,12 +1,64 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/patent_collection/PatentCollection.gd" type="Script" id=1]
 [ext_resource path="res://assets/visual/patents/patent04_walkman.png" type="Texture" id=2]
 [ext_resource path="res://entities/patent/Patent.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/visual/patents/patent02_progress_bar.png" type="Texture" id=4]
+[ext_resource path="res://assets/visual/patents/patent05_fan.png" type="Texture" id=5]
+[ext_resource path="res://assets/visual/patents/patent06_play_button.png" type="Texture" id=6]
+[ext_resource path="res://assets/visual/patents/patent03_tsb.png" type="Texture" id=7]
 
 [node name="PatentCollection" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="Progress Bar" parent="." instance=ExtResource( 3 )]
+draft = ExtResource( 4 )
+id = "#128.2/a4"
+description = "A bar showing the progress of a certain task by filling it with color.
+
+1. Bar containing the progress visual
+
+2. Left progress indicated by an empty bar
+
+3. Finished progress indicated by a filled bar
+
+4. Numeric value expression the finished progress in percent from 0 to 100"
+
 [node name="Walkman" parent="." instance=ExtResource( 3 )]
 draft = ExtResource( 2 )
 id = "#64.5/a4"
+description = "A device used for playing back audio.
+
+1. A button for recording audio
+
+2. Buttons which manipulate the audio-flow
+
+3. Reel"
+price = 500
+owned = true
+
+[node name="TSB" parent="." instance=ExtResource( 3 )]
+draft = ExtResource( 7 )
+id = "#512.1/c9"
+description = "TSB  - Triangle Serial Bus is an interface used to connect  two electronical components for sending and retreiving data.
+
+1. Connector
+
+2. Blue cable indicating speed
+
+3. Isolator to keep the speed inside"
+price = 2000
+
+[node name="Fan" parent="." instance=ExtResource( 3 )]
+draft = ExtResource( 5 )
+id = "#32.9/p3"
+description = "Circulating metal that cools down air.
+
+1. "
+price = 8000
+
+[node name="Play Button" parent="." instance=ExtResource( 3 )]
+draft = ExtResource( 6 )
+id = "#2.3/u4"
+description = "A button that, when pressed, starts a certain task or action."
+price = 4000

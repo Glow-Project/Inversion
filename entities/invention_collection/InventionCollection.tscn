@@ -1,9 +1,67 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/invention/Invention.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/invention_collection/InventionCollection.gd" type="Script" id=2]
+[ext_resource path="res://assets/visual/inventions/patent01_loading_screen.png" type="Texture" id=3]
+[ext_resource path="res://assets/visual/inventions/patent01_installer.png" type="Texture" id=4]
+[ext_resource path="res://assets/visual/inventions/patent01_updater.png" type="Texture" id=5]
+[ext_resource path="res://assets/visual/inventions/patent01_battery.png" type="Texture" id=6]
+[ext_resource path="res://assets/visual/inventions/patent01_scroll_bar.png" type="Texture" id=7]
+[ext_resource path="res://assets/visual/inventions/patent03_camera.png" type="Texture" id=8]
+[ext_resource path="res://assets/visual/inventions/patent03_printer.png" type="Texture" id=9]
+[ext_resource path="res://assets/visual/inventions/patent03_hub.png" type="Texture" id=10]
+[ext_resource path="res://assets/visual/inventions/patent03_bed.png" type="Texture" id=11]
 
 [node name="InventionCollection" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="Loading Screen" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 3 )
+description = "This is a loading screen of a very innovative game made by Dark Energy Studios.
+The screen is supposed to indicate wether or not it is loading, and how much has already got loaded."
+patent_id = [ "#128.2/a4" ]
+
 [node name="Installer" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 4 )
+description = "An installer that is used for installing software on the hardware, while visually indicating the progress."
+patent_id = [ "#128.2/a4" ]
+
+[node name="Updater" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 5 )
+description = "Software that is used for updating certain software."
+patent_id = [ "#128.2/a4" ]
+
+[node name="Battery" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 6 )
+description = "A battery bar representing the remaining energy in the battery of the device."
+patent_id = [ "#128.2/a4" ]
+
+[node name="Scrollbar" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 7 )
+description = "A bar used for scrolling through text that is too large for the screen to be displayed at once. "
+patent_id = [ "#128.2/a4" ]
+
+[node name="Camera" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 8 )
+description = "Vintage camera with high-speed TSB connector."
+patent_id = [ "#512.1/c9" ]
+
+[node name="Printer" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 9 )
+description = "Print documents and pictures with the high-speed TSB connector"
+patent_id = [ "#512.1/c9" ]
+
+[node name="Hub" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 10 )
+description = "Connect multiple TSB devices, like a camera or printer, via our hub together."
+patent_id = [ "#512.1/c9" ]
+
+[node name="Immersion bed" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 11 )
+description = "The immersion bed let's you dive into beautiful foreign worlds powered by TSB."
+patent_id = [ "#512.1/c9" ]
+
+[node name="Aluminati Badge" parent="." instance=ExtResource( 1 )]
+draft = ExtResource( 10 )
+description = "Identify your conspirancy friends with the Aluminati badge."
+patent_id = [ "#512.1/c9" ]

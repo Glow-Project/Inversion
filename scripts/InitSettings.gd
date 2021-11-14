@@ -5,10 +5,10 @@ func _enter_tree():
 	auto_load = true
 	auto_save = true
 
-	set_default("volume", 1.0)
+	set_default("volume", -10)
 	set_default("music", true)
 	set_default("fullscreen", false)
-
+	sets("volume", -10)
 	adapt_settings()
 
 # Override `sets` function to instantly adapt settings

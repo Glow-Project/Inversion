@@ -1,8 +1,138 @@
-[gd_scene format=2]
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://game/apps/lawsuit/LawsuitApp.gd" type="Script" id=1]
+[ext_resource path="res://assets/visual/exit_button.png" type="Texture" id=2]
+[ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/visual/exit_button_white.png" type="Texture" id=5]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+extra_spacing_top = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+outline_size = 1
+outline_color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 6 )
 
 [node name="LawsuitApp" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ContinuousMusic" parent="." instance=ExtResource( 3 )]
+stream = ExtResource( 4 )
+music_name = "bahamas"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 160.0
+color = Color( 0.141176, 0.0941176, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VisibleInvention" type="Control" parent="."]
+margin_top = -0.374573
+margin_right = 40.0
+margin_bottom = 39.6254
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescriptionBackground" type="ColorRect" parent="VisibleInvention"]
+margin_left = 151.0
+margin_top = 37.0
+margin_right = 315.0
+margin_bottom = 105.0
+color = Color( 0, 0, 0, 0.752941 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="VisibleInvention"]
+margin_left = 155.0
+margin_top = 42.0
+margin_right = 312.0
+margin_bottom = 101.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Lorem ipsum da wro öag gdfsö kjfgntg t dufiogherlkg bekg dfgodsgjdjfo grekgn erlgkn fiough "
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Draft" type="Sprite" parent="VisibleInvention"]
+position = Vector2( 60, 30 )
+centered = false
+
+[node name="Titel" type="Label" parent="VisibleInvention"]
+margin_left = 88.6132
+margin_top = 8.9144
+margin_right = 226.613
+margin_bottom = 22.9144
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0862745, 0.745098, 0.894118, 1 )
+custom_colors/font_color_shadow = Color( 0.0509804, 0.372549, 0.631373, 1 )
+text = "Title Text"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="TextureButton" parent="."]
+margin_left = 5.65686
+margin_top = 4.24265
+margin_right = 21.6569
+margin_bottom = 20.2426
+rect_scale = Vector2( 2, 2 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sue" type="Button" parent="."]
+margin_left = 206.332
+margin_top = 121.369
+margin_right = 263.332
+margin_bottom = 144.369
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.12549, 0.12549, 1 )
+custom_colors/font_color_hover = Color( 1, 0.501961, 0.501961, 1 )
+text = "Sue"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectPatent" type="OptionButton" parent="."]
+margin_left = 24.1663
+margin_top = 128.98
+margin_right = 219.166
+margin_bottom = 148.98
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 4 )
+text = "#64.5/a4 - Walkman"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="item_selected" from="SelectPatent" to="." method="_on_SelectPatent_item_selected"]
