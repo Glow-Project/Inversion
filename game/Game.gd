@@ -5,8 +5,11 @@ func _ready():
 	$Background.visible = true
 	$Background/AnimationPlayer.play("diashow")
 	
-	$Music.play(global.audio_timestamps["bahamas"])
+	if settings.gets("music"):
+		$Music.play(global.audio_timestamps["bahamas"])
+
 	$AnimationPlayer.play("enter")
+
 
 func _on_Patents_pressed():
 	get_tree().change_scene("res://game/apps/patent/PatentApp.tscn")

@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/visual/SimpleBanana.png" type="Texture" id=9]
 [ext_resource path="res://assets/visual/keyboard_buttons/E.png" type="Texture" id=10]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=5]
 resource_name = "bahamas_intro"
 length = 23.0
 step = 0.01
@@ -204,7 +204,7 @@ tracks/4/keys = {
 "values": [ 0.0, -10.0 ]
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=7]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
@@ -217,7 +217,7 @@ region = Rect2( 0, 0, 8, 8 )
 atlas = ExtResource( 10 )
 region = Rect2( 8, 0, 8, 8 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
@@ -236,7 +236,7 @@ stream = ExtResource( 2 )
 [node name="Music" type="AudioStreamPlayer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/bahamas_intro = SubResource( 1 )
+anims/bahamas_intro = SubResource( 5 )
 anims/into_banana = SubResource( 6 )
 
 [node name="BahamaImages" type="Node2D" parent="."]
@@ -270,7 +270,7 @@ margin_top = 65.0
 margin_right = 96.0
 margin_bottom = 78.0
 rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.552941, 0.313726, 0, 1 )
 autowrap = true
@@ -289,7 +289,8 @@ texture = ExtResource( 9 )
 visible = false
 position = Vector2( 295.317, 138.697 )
 scale = Vector2( 3, 3 )
-frames = SubResource( 5 )
+frames = SubResource( 8 )
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

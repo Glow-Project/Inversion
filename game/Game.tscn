@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=12]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "enter"
 length = 2.0
 tracks/0/type = "value"
@@ -41,8 +41,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0.01, 0.01 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "diashow"
+[sub_resource type="Animation" id=2]
 length = 60.0
 loop = true
 tracks/0/type = "value"
@@ -94,7 +93,7 @@ tracks/3/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
@@ -113,14 +112,14 @@ stream = ExtResource( 12 )
 volume_db = -10.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/enter = SubResource( 3 )
+anims/enter = SubResource( 1 )
 
 [node name="Background" type="Node2D" parent="."]
 modulate = Color( 0.760784, 0.760784, 0.760784, 1 )
 position = Vector2( -0.374588, 0.374573 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
-anims/diashow = SubResource( 1 )
+anims/diashow = SubResource( 2 )
 
 [node name="Bahamas1" type="Sprite" parent="Background"]
 position = Vector2( 0, -0.464039 )
@@ -155,7 +154,7 @@ margin_top = 8.0
 margin_right = 141.0
 margin_bottom = 22.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.552941, 0.313726, 0, 1 )
 text = "Bahama"
