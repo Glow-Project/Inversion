@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://components/patent_article/PatentArticle.gd" type="Script" id=1]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 5
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+extra_spacing_top = 5
+font_data = ExtResource( 2 )
+
+[node name="PatentArticle" type="Control"]
+anchor_left = -0.14
+anchor_top = -0.233
+anchor_right = 0.167
+anchor_bottom = 0.256
+margin_left = 10.8
+margin_top = 6.28
+margin_right = -11.44
+margin_bottom = -6.96
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = -4.0
+margin_right = 66.0
+margin_bottom = 58.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draft" type="Sprite" parent="."]
+position = Vector2( 18.652, 9.942 )
+scale = Vector2( 0.5, 0.5 )
+centered = false
+
+[node name="Name" type="Label" parent="."]
+margin_left = -0.132431
+margin_top = -2.55691
+margin_right = 64.8676
+margin_bottom = 11.4431
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0.858824, 0.301961, 1 )
+text = "Name"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="Label" parent="."]
+margin_top = 43.0
+margin_right = 65.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.988235, 0.133333, 1 )
+text = "???? USD"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
