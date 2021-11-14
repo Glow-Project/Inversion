@@ -1,125 +1,219 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://assets/visual/banana_logo.png" type="Texture" id=1]
+[ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=1]
 [ext_resource path="res://game/Game.gd" type="Script" id=2]
-[ext_resource path="res://assets/visual/patent_app.png" type="Texture" id=3]
+[ext_resource path="res://assets/visual/bay_3.png" type="Texture" id=3]
 [ext_resource path="res://assets/visual/lawsuit_hammer.png" type="Texture" id=4]
-[ext_resource path="res://assets/visual/news_app.png" type="Texture" id=5]
+[ext_resource path="res://assets/visual/SimpleBanana.png" type="Texture" id=5]
 [ext_resource path="res://assets/visual/bank_app.png" type="Texture" id=6]
 [ext_resource path="res://assets/visual/bay_1.png" type="Texture" id=7]
 [ext_resource path="res://assets/visual/bay_2.png" type="Texture" id=8]
+[ext_resource path="res://assets/visual/patent_app.png" type="Texture" id=9]
+[ext_resource path="res://assets/visual/news_app.png" type="Texture" id=10]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=12]
+
+[sub_resource type="Animation" id=3]
+resource_name = "enter"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 220.145, 26.493 ), Vector2( 160, 80 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "diashow"
+length = 60.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bahamas1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 14, 16, 58, 60 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bahamas2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 14, 16, 29, 31 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bahamas3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 29, 31, 44, 46 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Bahamas4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 44, 46, 58.1, 60.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
 
 [node name="Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource( 2 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/enter = SubResource( 3 )
+
+[node name="Background" type="Node2D" parent="."]
+modulate = Color( 0.760784, 0.760784, 0.760784, 1 )
+position = Vector2( -0.374588, 0.374573 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+anims/diashow = SubResource( 1 )
+
+[node name="Bahamas1" type="Sprite" parent="Background"]
+position = Vector2( 0, -0.464039 )
+scale = Vector2( 1.06834, 0.832715 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Bahamas2" type="Sprite" parent="Background"]
+modulate = Color( 0.85, 0.85, 0.85, 0 )
+position = Vector2( 0, -0.486136 )
+scale = Vector2( 1.0684, 0.831596 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Bahamas3" type="Sprite" parent="Background"]
+modulate = Color( 0.410345, 0.410345, 0.410345, 0 )
+position = Vector2( 0, -0.53033 )
+scale = Vector2( 4.78391, 3.14879 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Bahamas4" type="Sprite" parent="Background"]
+modulate = Color( 0.270455, 0.270455, 0.270455, 0 )
+position = Vector2( -1.15659, -0.460747 )
+scale = Vector2( 6.70144, 4.45997 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Titel" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 8.0
+margin_right = 141.0
+margin_bottom = 22.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.552941, 0.313726, 0, 1 )
+text = "Bahama"
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-margin_right = 1024.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 0, 128 )
-texture = ExtResource( 1 )
-stretch_mode = 6
+[node name="Banana" type="Sprite" parent="."]
+modulate = Color( 1, 0.819608, 0.588235, 1 )
+position = Vector2( 226.038, 19.3772 )
+scale = Vector2( 2.80219, 2.66035 )
+texture = ExtResource( 5 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 132.0
-margin_right = 1024.0
-margin_bottom = 536.0
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 220.145, 26.493 )
+current = true
+zoom = Vector2( 0.01, 0.01 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer"]
-margin_right = 200.0
-margin_bottom = 404.0
-rect_min_size = Vector2( 200, 0 )
-text = "Money: 123$
-Patents: 4
-Lawsuits: 1 won, 2 lost
-News: 1"
-
-[node name="AppContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 204.0
-margin_right = 608.0
-margin_bottom = 404.0
-rect_min_size = Vector2( 132, 132 )
+[node name="Apps" type="GridContainer" parent="."]
+anchor_top = -9.53674e-08
+anchor_bottom = -9.53674e-08
+margin_left = 97.638
+margin_top = 44.5254
+margin_right = 264.638
+margin_bottom = 162.525
+rect_scale = Vector2( 3, 3 )
 columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="PatentsButton" type="Button" parent="VBoxContainer/HBoxContainer/AppContainer"]
-margin_right = 200.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 200, 200 )
-hint_tooltip = "Patent App
+[node name="Patents" type="TextureButton" parent="Apps"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 9 )
 
-Manage all your patents."
-icon = ExtResource( 3 )
-flat = true
-expand_icon = true
+[node name="News" type="TextureButton" parent="Apps"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 10 )
 
-[node name="NewsButton" type="Button" parent="VBoxContainer/HBoxContainer/AppContainer"]
-margin_left = 204.0
-margin_right = 404.0
-margin_bottom = 200.0
-rect_min_size = Vector2( 200, 200 )
-hint_tooltip = "News
+[node name="Lawsuits" type="TextureButton" parent="Apps"]
+margin_top = 20.0
+margin_right = 16.0
+margin_bottom = 36.0
+texture_normal = ExtResource( 4 )
 
-Get the latest news, now!"
-icon = ExtResource( 5 )
-flat = true
-expand_icon = true
+[node name="Bank" type="TextureButton" parent="Apps"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 36.0
+margin_bottom = 36.0
+texture_normal = ExtResource( 6 )
 
-[node name="LawsuitButton" type="Button" parent="VBoxContainer/HBoxContainer/AppContainer"]
-margin_top = 204.0
-margin_right = 200.0
-margin_bottom = 404.0
-rect_min_size = Vector2( 200, 200 )
-hint_tooltip = "Lawsuit App
-
-Get rich by sueing others."
-icon = ExtResource( 4 )
-flat = true
-expand_icon = true
-
-[node name="BankButton" type="Button" parent="VBoxContainer/HBoxContainer/AppContainer"]
-margin_left = 204.0
-margin_top = 204.0
-margin_right = 404.0
-margin_bottom = 404.0
-rect_min_size = Vector2( 200, 200 )
-hint_tooltip = "Bank App
-
-Manage your fortune.
-"
-icon = ExtResource( 6 )
-flat = true
-expand_icon = true
-
-[node name="LifeGoals" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 612.0
-margin_right = 912.0
-margin_bottom = 404.0
-
-[node name="LifeGoal" type="TextureRect" parent="VBoxContainer/HBoxContainer/LifeGoals"]
-margin_right = 300.0
-margin_bottom = 193.0
-texture = ExtResource( 7 )
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/LifeGoals"]
-margin_top = 197.0
-margin_right = 300.0
-margin_bottom = 390.0
-texture = ExtResource( 8 )
-
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/AppContainer/PatentsButton" to="." method="_on_PatentsButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/AppContainer/NewsButton" to="." method="_on_NewsButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/AppContainer/LawsuitButton" to="." method="_on_LawsuitButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/AppContainer/BankButton" to="." method="_on_BankButton_pressed"]
+[connection signal="pressed" from="Apps/Patents" to="." method="_on_Patents_pressed"]
+[connection signal="pressed" from="Apps/News" to="." method="_on_News_pressed"]
+[connection signal="pressed" from="Apps/Lawsuits" to="." method="_on_Lawsuits_pressed"]
+[connection signal="pressed" from="Apps/Bank" to="." method="_on_Bank_pressed"]
