@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://cutscenes/bahamas_intro/BahamasIntro.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/voice/JobCallForBahamas.wav" type="AudioStream" id=2]
@@ -9,10 +9,11 @@
 [ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=7]
 [ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://assets/visual/SimpleBanana.png" type="Texture" id=9]
+[ext_resource path="res://assets/visual/keyboard_buttons/E.png" type="Texture" id=10]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=5]
 resource_name = "bahamas_intro"
-length = 30.0
+length = 23.0
 step = 0.01
 tracks/0/type = "audio"
 tracks/0/path = NodePath("MainAudio")
@@ -25,12 +26,8 @@ tracks/0/keys = {
 "end_offset": 0.0,
 "start_offset": 0.0,
 "stream": ExtResource( 2 )
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource( 3 )
 } ],
-"times": PoolRealArray( 0, 9 )
+"times": PoolRealArray( 0 )
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
@@ -116,21 +113,131 @@ tracks/7/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/8/type = "value"
+tracks/8/path = NodePath("EKey:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 23 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 8.96 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_music"
+} ]
+}
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="Animation" id=6]
+resource_name = "into_banana"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:current")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.02, 1.02 ), Vector2( 0.01, 0.01 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 160, 80 ), Vector2( 246.364, 91.3265 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camera2D:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 205.7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Music:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 3.13834, 1 ),
+"update": 0,
+"values": [ 0.0, -10.0 ]
+}
+
+[sub_resource type="DynamicFont" id=7]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 10 )
+region = Rect2( 8, 0, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
 [node name="BahamasIntro" type="Node2D"]
 modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 1 )
+music = ExtResource( 3 )
 
 [node name="MainAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/bahamas_intro = SubResource( 1 )
+anims/bahamas_intro = SubResource( 5 )
+anims/into_banana = SubResource( 6 )
 
 [node name="BahamaImages" type="Node2D" parent="."]
 
@@ -153,8 +260,8 @@ texture = ExtResource( 6 )
 
 [node name="Bahamas4" type="Sprite" parent="BahamaImages"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 162.921, 82.0553 )
-scale = Vector2( 6.82216, 4.60065 )
+position = Vector2( 160.089, 80.6395 )
+scale = Vector2( 7.39242, 5.07259 )
 texture = ExtResource( 7 )
 
 [node name="Titel" type="Label" parent="."]
@@ -163,7 +270,7 @@ margin_top = 65.0
 margin_right = 96.0
 margin_bottom = 78.0
 rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.552941, 0.313726, 0, 1 )
 autowrap = true
@@ -177,3 +284,17 @@ modulate = Color( 1, 0.819608, 0.588235, 1 )
 position = Vector2( 251.661, 78.9386 )
 scale = Vector2( 4.42447, 3.95818 )
 texture = ExtResource( 9 )
+
+[node name="EKey" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 295.317, 138.697 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 8 )
+frame = 1
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 80 )
+current = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
