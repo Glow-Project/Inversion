@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bank_app_white.png-c4774726a54af0f6da961ad300d4ab1a.stex"
+path="res://.import/lawsuit_hammer_white.png-b9a34d4b2b4a3ed7afc0565c2b75f92c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/bank_app_white.png"
-dest_files=[ "res://.import/bank_app_white.png-c4774726a54af0f6da961ad300d4ab1a.stex" ]
+source_file="res://assets/visual/apps/lawsuit_hammer_white.png"
+dest_files=[ "res://.import/lawsuit_hammer_white.png-b9a34d4b2b4a3ed7afc0565c2b75f92c.stex" ]
 
 [params]
 

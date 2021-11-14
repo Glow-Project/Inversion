@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lawsuit_hammer_white.png-8823202d0b94c0ee2736af79dba68a41.stex"
+path="res://.import/news_app_white.png-7fca98dd6b7c6d318ba6f012b845b52b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/lawsuit_hammer_white.png"
-dest_files=[ "res://.import/lawsuit_hammer_white.png-8823202d0b94c0ee2736af79dba68a41.stex" ]
+source_file="res://assets/visual/apps/news_app_white.png"
+dest_files=[ "res://.import/news_app_white.png-7fca98dd6b7c6d318ba6f012b845b52b.stex" ]
 
 [params]
 

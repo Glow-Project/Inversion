@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/news_app_white.png-9781f8ce91c1ee7679025125ae805a96.stex"
+path="res://.import/news_app_deactivated.png-656308437de11f630a09722d5c6a7e61.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/news_app_white.png"
-dest_files=[ "res://.import/news_app_white.png-9781f8ce91c1ee7679025125ae805a96.stex" ]
+source_file="res://assets/visual/apps/news_app_deactivated.png"
+dest_files=[ "res://.import/news_app_deactivated.png-656308437de11f630a09722d5c6a7e61.stex" ]
 
 [params]
 

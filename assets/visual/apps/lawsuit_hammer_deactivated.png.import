@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/patent_app_white.png-57590669420ecd53d8ba61722a96d88a.stex"
+path="res://.import/lawsuit_hammer_deactivated.png-2471f321d948c2b110d2022e4cc04884.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/patent_app_white.png"
-dest_files=[ "res://.import/patent_app_white.png-57590669420ecd53d8ba61722a96d88a.stex" ]
+source_file="res://assets/visual/apps/lawsuit_hammer_deactivated.png"
+dest_files=[ "res://.import/lawsuit_hammer_deactivated.png-2471f321d948c2b110d2022e4cc04884.stex" ]
 
 [params]
 
