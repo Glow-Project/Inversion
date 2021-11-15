@@ -2,8 +2,21 @@ extends Control
 
 
 func _ready():
-	pass # Replace with function body.
+	for patent in patent_collection.get_all():
+		$PatentList.add_item(str(patent))
 
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
+
+
+func _on_PatentList_item_selected(index):
+	var collection = patent_collection.get_all()
+	if index > len(collection)-1:
+		print("Invalid selected patent with index %d, while the max index is %d" % [index, len(collection)])
+		return
+
+	$PatentID.text = collection[index].id
+	$PatentName.text = collection[index].name
+	$PatentDraft.texture = collection[index].draft
+	$PatentDescription.text = collection[index].description

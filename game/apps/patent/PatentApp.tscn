@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/visual/exit_button.png" type="Texture" id=1]
 [ext_resource path="res://assets/visual/exit_button_white.png" type="Texture" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://assets/visual/patent_inapp.png" type="Texture" id=5]
 [ext_resource path="res://assets/visual/fonts/description.tres" type="DynamicFont" id=6]
 [ext_resource path="res://assets/visual/patents/patent03_tsb.png" type="Texture" id=7]
+[ext_resource path="res://assets/visual/ui/PatentApp.tres" type="TileSet" id=8]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 2
@@ -18,6 +22,10 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 8
+font_data = ExtResource( 4 )
+
 [node name="PatentApp" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,6 +34,30 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Background" type="ColorRect" parent="."]
+modulate = Color( 0.62, 0.55304, 0.4526, 1 )
+margin_right = 320.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIBackground" type="TileMap" parent="."]
+position = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.99, 0.99 )
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 7, 0, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 13, 8, 0, 14, 8, 0, 15, 8, 0, 16, 8, 0, 17, 8, 0, 18, 8, 0, 19, 1, 0, 65543, 6, 0, 65544, 11, 0, 65545, 11, 0, 65546, 11, 0, 65547, 11, 0, 65548, 11, 0, 65549, 11, 0, 65550, 11, 0, 65551, 11, 0, 65552, 11, 0, 65553, 11, 0, 65554, 11, 0, 65555, 7, 0, 131079, 4, 0, 131080, 10, 0, 131081, 10, 0, 131082, 10, 0, 131083, 10, 0, 131084, 10, 0, 131085, 10, 0, 131086, 10, 0, 131087, 10, 0, 131088, 10, 0, 131089, 10, 0, 131090, 10, 0, 131091, 5, 0, 196608, 0, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 196612, 8, 0, 196613, 8, 0, 196614, 1, 0, 196615, 6, 0, 196616, 11, 0, 196617, 11, 0, 196618, 11, 0, 196619, 11, 0, 196620, 11, 0, 196621, 11, 0, 196622, 11, 0, 196623, 11, 0, 196624, 11, 0, 196625, 11, 0, 196626, 11, 0, 196627, 7, 0, 262144, 6, 0, 262145, 11, 0, 262146, 11, 0, 262147, 11, 0, 262148, 11, 0, 262149, 11, 0, 262150, 7, 0, 262151, 6, 0, 262152, 11, 0, 262153, 11, 0, 262154, 11, 0, 262155, 11, 0, 262156, 11, 0, 262157, 11, 0, 262158, 11, 0, 262159, 11, 0, 262160, 11, 0, 262161, 11, 0, 262162, 11, 0, 262163, 7, 0, 327680, 6, 0, 327681, 11, 0, 327682, 11, 0, 327683, 11, 0, 327684, 11, 0, 327685, 11, 0, 327686, 7, 0, 327687, 6, 0, 327688, 11, 0, 327689, 11, 0, 327690, 11, 0, 327691, 11, 0, 327692, 11, 0, 327693, 11, 0, 327694, 11, 0, 327695, 11, 0, 327696, 11, 0, 327697, 11, 0, 327698, 11, 0, 327699, 7, 0, 393216, 6, 0, 393217, 11, 0, 393218, 22, 0, 393219, 22, 0, 393220, 11, 0, 393221, 11, 0, 393222, 7, 0, 393223, 6, 0, 393224, 11, 0, 393225, 11, 0, 393226, 11, 0, 393227, 11, 0, 393228, 11, 0, 393229, 11, 0, 393230, 11, 0, 393231, 11, 0, 393232, 11, 0, 393233, 11, 0, 393234, 11, 0, 393235, 7, 0, 458752, 6, 0, 458753, 11, 0, 458754, 22, 0, 458755, 22, 0, 458756, 22, 0, 458757, 11, 0, 458758, 7, 0, 458759, 6, 0, 458760, 11, 0, 458761, 11, 0, 458762, 11, 0, 458763, 11, 0, 458764, 11, 0, 458765, 11, 0, 458766, 11, 0, 458767, 11, 0, 458768, 11, 0, 458769, 11, 0, 458770, 11, 0, 458771, 7, 0, 524288, 6, 0, 524289, 11, 0, 524290, 11, 0, 524291, 11, 0, 524292, 11, 0, 524293, 11, 0, 524294, 7, 0, 524295, 6, 0, 524296, 11, 0, 524297, 11, 0, 524298, 11, 0, 524299, 11, 0, 524300, 11, 0, 524301, 11, 0, 524302, 11, 0, 524303, 11, 0, 524304, 11, 0, 524305, 11, 0, 524306, 11, 0, 524307, 7, 0, 589824, 2, 0, 589825, 9, 0, 589826, 9, 0, 589827, 9, 0, 589828, 9, 0, 589829, 9, 0, 589830, 3, 0, 589831, 2, 0, 589832, 9, 0, 589833, 9, 0, 589834, 9, 0, 589835, 9, 0, 589836, 9, 0, 589837, 9, 0, 589838, 9, 0, 589839, 9, 0, 589840, 9, 0, 589841, 9, 0, 589842, 9, 0, 589843, 3, 0 )
+
+[node name="UIControlBackground" type="TileMap" parent="."]
+position = Vector2( 0, 0.5 )
+scale = Vector2( 0.99, 0.99 )
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131079, 20, 0, 131080, 19, 0, 131081, 19, 0, 131082, 19, 0, 131083, 21, 0, 131084, 20, 0, 131085, 19, 0, 131086, 19, 0, 131087, 19, 0, 131088, 19, 0, 131089, 19, 0, 131090, 19, 0, 131091, 21, 0, 196608, 13, 0, 196609, 18, 0, 196610, 18, 0, 196611, 18, 0, 196612, 18, 0, 196613, 18, 0, 196614, 12, 0, 196615, 16, 0, 196616, 23, 0, 196617, 23, 0, 196618, 23, 0, 196619, 17, 0, 196620, 16, 0, 196621, 23, 0, 196622, 23, 0, 196623, 23, 0, 196624, 23, 0, 196625, 23, 0, 196626, 23, 0, 196627, 17, 0, 262144, 16, 0, 262145, 23, 0, 262146, 23, 0, 262147, 23, 0, 262148, 23, 0, 262149, 23, 0, 262150, 17, 0, 262151, 16, 0, 262152, 23, 0, 262153, 23, 0, 262154, 23, 0, 262155, 17, 0, 262156, 16, 0, 262157, 23, 0, 262158, 23, 0, 262159, 23, 0, 262160, 23, 0, 262161, 23, 0, 262162, 23, 0, 262163, 17, 0, 327680, 16, 0, 327681, 23, 0, 327682, 23, 0, 327683, 23, 0, 327684, 23, 0, 327685, 23, 0, 327686, 17, 0, 327687, 16, 0, 327688, 23, 0, 327689, 23, 0, 327690, 23, 0, 327691, 17, 0, 327692, 16, 0, 327693, 23, 0, 327694, 23, 0, 327695, 23, 0, 327696, 23, 0, 327697, 23, 0, 327698, 23, 0, 327699, 17, 0, 393216, 16, 0, 393217, 23, 0, 393218, 23, 0, 393219, 23, 0, 393220, 23, 0, 393221, 23, 0, 393222, 17, 0, 393223, 14, 0, 393224, 22, 0, 393225, 22, 0, 393226, 22, 0, 393227, 15, 0, 393228, 16, 0, 393229, 23, 0, 393230, 23, 0, 393231, 23, 0, 393232, 23, 0, 393233, 23, 0, 393234, 23, 0, 393235, 17, 0, 458752, 16, 0, 458753, 23, 0, 458754, 23, 0, 458755, 23, 0, 458756, 23, 0, 458757, 23, 0, 458758, 17, 0, 458764, 16, 0, 458765, 23, 0, 458766, 23, 0, 458767, 23, 0, 458768, 23, 0, 458769, 23, 0, 458770, 23, 0, 458771, 17, 0, 524288, 16, 0, 524289, 23, 0, 524290, 23, 0, 524291, 23, 0, 524292, 23, 0, 524293, 23, 0, 524294, 17, 0, 524300, 16, 0, 524301, 23, 0, 524302, 23, 0, 524303, 23, 0, 524304, 23, 0, 524305, 23, 0, 524306, 23, 0, 524307, 17, 0, 589824, 14, 0, 589825, 22, 0, 589826, 22, 0, 589827, 22, 0, 589828, 22, 0, 589829, 22, 0, 589830, 15, 0, 589836, 14, 0, 589837, 22, 0, 589838, 22, 0, 589839, 22, 0, 589840, 22, 0, 589841, 22, 0, 589842, 22, 0, 589843, 15, 0 )
 
 [node name="Back" type="TextureButton" parent="."]
 margin_left = 5.65686
@@ -41,19 +73,21 @@ __meta__ = {
 
 [node name="PatentList" type="ItemList" parent="."]
 margin_left = 9.0
-margin_top = 48.0
-margin_right = 109.0
-margin_bottom = 154.0
+margin_top = 56.0
+margin_right = 103.0
+margin_bottom = 150.0
+custom_styles/bg = SubResource( 4 )
 custom_fonts/font = ExtResource( 6 )
+custom_constants/vseparation = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PatentID" type="Label" parent="."]
-margin_left = 111.844
-margin_top = 3.88107
-margin_right = 240.844
-margin_bottom = 18.8811
+margin_left = 119.988
+margin_top = 5.71867
+margin_right = 248.988
+margin_bottom = 20.7187
 rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.89, 0.6764, 0.089, 1 )
@@ -65,10 +99,10 @@ __meta__ = {
 }
 
 [node name="PatentName" type="Label" parent="."]
-margin_left = 113.0
-margin_top = 16.0
-margin_right = 320.0
-margin_bottom = 41.0
+margin_left = 120.777
+margin_top = 18.45
+margin_right = 327.777
+margin_bottom = 34.45
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.905882, 0.905882, 0.905882, 1 )
 custom_colors/font_color_shadow = Color( 0.454902, 0.454902, 0.454902, 1 )
@@ -79,33 +113,31 @@ __meta__ = {
 }
 
 [node name="AppIcon" type="TextureRect" parent="."]
-margin_left = 118.357
-margin_top = 101.735
-margin_right = 170.357
-margin_bottom = 153.735
+margin_left = 64.3914
+margin_top = 2.85366
+margin_right = 106.391
+margin_bottom = 44.8537
 texture = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DescriptionBackground" type="ColorRect" parent="."]
-margin_left = 181.0
-margin_top = 34.0
-margin_right = 317.0
-margin_bottom = 158.0
-color = Color( 0.180392, 0.0901961, 0.0901961, 0.752941 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="PatentDescription" type="RichTextLabel" parent="."]
-margin_left = 184.0
-margin_top = 37.0
-margin_right = 315.0
-margin_bottom = 155.0
-custom_fonts/normal_font = ExtResource( 6 )
-text = "Next generation serial bus connector triangle shaped needs at least three attempts to plug it in right.
+margin_left = 201.0
+margin_top = 47.0
+margin_right = 349.0
+margin_bottom = 186.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/normal_font = SubResource( 3 )
+custom_constants/line_separation = 1
+text = "Next generation high speed serial bus connector. 
+
+- triangle shaped 
+- needs at least three attempts to plug it in right
+
+-- DRAFT 
+
 1. connector
 2. blue cable indicating speed
 3. isolator to keep the speed inside"
@@ -113,23 +145,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DraftBackground" type="ColorRect" parent="."]
-margin_left = 111.0
-margin_top = 34.1675
-margin_right = 178.0
-margin_bottom = 99.1675
-color = Color( 0.180392, 0.0901961, 0.0901961, 0.752941 )
+[node name="PatentDraft" type="TextureRect" parent="."]
+margin_left = 118.0
+margin_top = 44.0
+margin_right = 185.0
+margin_bottom = 105.0
+texture = ExtResource( 7 )
+expand = true
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="PatentDraft" type="TextureRect" parent="DraftBackground"]
-margin_left = 1.30308
-margin_top = 0.265045
-margin_right = 65.3031
-margin_bottom = 64.265
-texture = ExtResource( 7 )
-expand = true
-
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="item_selected" from="PatentList" to="." method="_on_PatentList_item_selected"]
