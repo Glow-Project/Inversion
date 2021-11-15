@@ -198,7 +198,6 @@ __meta__ = {
 [node name="Patents" type="TextureButton" parent="Apps"]
 margin_right = 16.0
 margin_bottom = 16.0
-disabled = true
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 13 )
 texture_disabled = ExtResource( 20 )

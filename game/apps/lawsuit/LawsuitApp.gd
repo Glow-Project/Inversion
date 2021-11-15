@@ -13,8 +13,8 @@ func sync_state():
 
 	$SelectPatent.clear()
 	for patent in patent_collection.get_owned():
-		print("%s - %s" % [patent.id, patent.name])
-		$SelectPatent.add_item("%s - %s" % [patent.id, patent.name])
+		print(str(patent))
+		$SelectPatent.add_item(str(patent))
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
