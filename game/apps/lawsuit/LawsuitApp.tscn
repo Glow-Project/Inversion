@@ -8,18 +8,18 @@
 [ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/visual/fonts/description.tres" type="DynamicFont" id=7]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 24
 outline_size = 1
 outline_color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 6 )
 
 [node name="LawsuitApp" type="Control"]
@@ -82,7 +82,7 @@ margin_left = 88.6132
 margin_top = 8.9144
 margin_right = 226.613
 margin_bottom = 22.9144
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.0862745, 0.745098, 0.894118, 1 )
 custom_colors/font_color_shadow = Color( 0.0509804, 0.372549, 0.631373, 1 )
 text = "Title Text"
@@ -109,7 +109,7 @@ margin_left = 206.332
 margin_top = 121.369
 margin_right = 263.332
 margin_bottom = 144.369
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.12549, 0.12549, 1 )
 custom_colors/font_color_hover = Color( 1, 0.501961, 0.501961, 1 )
 text = "Sue"
@@ -124,7 +124,7 @@ margin_top = 128.98
 margin_right = 219.166
 margin_bottom = 148.98
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "#64.5/a4 - Walkman"
 __meta__ = {
 "_edit_use_anchors_": false
