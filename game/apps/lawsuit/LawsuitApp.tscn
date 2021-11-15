@@ -6,11 +6,7 @@
 [ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=4]
 [ext_resource path="res://assets/visual/exit_button_white.png" type="Texture" id=5]
 [ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-size = 8
-extra_spacing_top = 5
-font_data = ExtResource( 6 )
+[ext_resource path="res://assets/visual/fonts/description.tres" type="DynamicFont" id=7]
 
 [sub_resource type="DynamicFont" id=2]
 outline_size = 2
@@ -70,7 +66,7 @@ margin_left = 155.0
 margin_top = 42.0
 margin_right = 312.0
 margin_bottom = 101.0
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = ExtResource( 7 )
 text = "Lorem ipsum da wro öag gdfsö kjfgntg t dufiogherlkg bekg dfgodsgjdjfo grekgn erlgkn fiough "
 __meta__ = {
 "_edit_lock_": true,
