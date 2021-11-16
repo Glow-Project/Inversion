@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/visual/exit_button.png" type="Texture" id=1]
 [ext_resource path="res://assets/visual/exit_button_white.png" type="Texture" id=2]
@@ -8,14 +8,9 @@
 [ext_resource path="res://assets/visual/fonts/description.tres" type="DynamicFont" id=6]
 [ext_resource path="res://assets/visual/patents/patent03_tsb.png" type="Texture" id=7]
 [ext_resource path="res://assets/visual/ui/PatentApp.tres" type="TileSet" id=8]
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="DynamicFont" id=1]
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
+[ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=10]
+[ext_resource path="res://assets/visual/ui/PatentApp_Theme.tres" type="Theme" id=11]
 
 [sub_resource type="DynamicFont" id=2]
 outline_size = 2
@@ -23,7 +18,13 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=3]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 8
+extra_spacing_char = 1
 font_data = ExtResource( 4 )
 
 [node name="PatentApp" type="Control"]
@@ -35,9 +36,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ContinuousMusic" parent="." instance=ExtResource( 9 )]
+stream = ExtResource( 10 )
+music_name = "bahamas"
+
 [node name="Background" type="ColorRect" parent="."]
 modulate = Color( 0.62, 0.55304, 0.4526, 1 )
-margin_right = 320.0
+margin_left = 0.37458
+margin_right = 320.375
 margin_bottom = 160.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -76,9 +82,9 @@ margin_left = 9.0
 margin_top = 56.0
 margin_right = 103.0
 margin_bottom = 150.0
-custom_styles/bg = SubResource( 4 )
+theme = ExtResource( 11 )
+custom_constants/vseparation = 8
 custom_fonts/font = ExtResource( 6 )
-custom_constants/vseparation = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -89,9 +95,9 @@ margin_top = 5.71867
 margin_right = 248.988
 margin_bottom = 20.7187
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.89, 0.6764, 0.089, 1 )
 custom_colors/font_color_shadow = Color( 0.63, 0.21462, 0.0504, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "#512.1/c9"
 autowrap = true
 __meta__ = {
@@ -103,9 +109,9 @@ margin_left = 120.777
 margin_top = 18.45
 margin_right = 327.777
 margin_bottom = 34.45
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.905882, 0.905882, 0.905882, 1 )
 custom_colors/font_color_shadow = Color( 0.454902, 0.454902, 0.454902, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Triangle Serial Bus"
 autowrap = true
 __meta__ = {
@@ -124,19 +130,21 @@ __meta__ = {
 }
 
 [node name="PatentDescription" type="RichTextLabel" parent="."]
-margin_left = 201.0
+margin_left = 200.813
 margin_top = 47.0
-margin_right = 349.0
-margin_bottom = 186.0
-rect_scale = Vector2( 0.75, 0.75 )
-custom_fonts/normal_font = SubResource( 3 )
-custom_constants/line_separation = 1
+margin_right = 308.813
+margin_bottom = 150.0
+theme = ExtResource( 11 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "Next generation high speed serial bus connector. 
 
 - triangle shaped 
 - needs at least three attempts to plug it in right
 
 -- DRAFT 
+
+
+
 
 1. connector
 2. blue cable indicating speed
@@ -147,9 +155,9 @@ __meta__ = {
 
 [node name="PatentDraft" type="TextureRect" parent="."]
 margin_left = 118.0
-margin_top = 44.0
-margin_right = 185.0
-margin_bottom = 105.0
+margin_top = 46.0
+margin_right = 182.0
+margin_bottom = 103.0
 texture = ExtResource( 7 )
 expand = true
 __meta__ = {
