@@ -3,8 +3,7 @@ extends Control
 
 func _ready():
 	for patent in patent_collection.get_all():
-		$PatentList.add_item(str(patent))
-
+		$PatentList.add_item(patent.name)
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
