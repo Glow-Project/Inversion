@@ -11,7 +11,7 @@ func _ready():
 	
 	# If no patent or no invention is selected, exit to main scene
 	if patent == null or invention == null:
-		printerr("Either the Invention or the Patent isn't declared")
+		printerr("Either global.selected_patent or the global.selected_invention isn't declared")
 		get_tree().change_scene("res://game/Game.tscn")
 
 func _on_Shape_pressed():
