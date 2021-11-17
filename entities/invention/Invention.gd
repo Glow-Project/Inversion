@@ -5,9 +5,9 @@ export var draft: Texture
 export(String, MULTILINE) var description
 export(Array, String) var patent_id
 
-export(float, 0.05, 0.75, 0.05) var color
-export(float, 0.05, 0.75, 0.05) var function
-export(float, 0.05, 0.75, 0.05) var shape
+export(float, 0.05, 0.75, 0.05) var color = 0.05
+export(float, 0.05, 0.75, 0.05) var function = 0.05
+export(float, 0.05, 0.75, 0.05) var shape = 0.05
 
 func _ready():
 	randomize()

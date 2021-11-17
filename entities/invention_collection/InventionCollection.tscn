@@ -88,6 +88,9 @@ patent_id = [ "#512.1/c9" ]
 draft = ExtResource( 10 )
 description = "Identify your conspirancy friends with the Aluminati badge."
 patent_id = [ "#512.1/c9" ]
+color = 0.2
+function = 0.3
+shape = 0.2
 
 [node name="Watch" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 13 )
@@ -195,3 +198,4 @@ patent_id = [ "#2.3/u4" ]
 color = 0.15
 function = 0.75
 shape = 0.1
+
