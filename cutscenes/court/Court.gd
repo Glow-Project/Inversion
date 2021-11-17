@@ -2,6 +2,7 @@ extends Node2D
 
 onready var patent: Patent = global.selected_patent
 onready var invention: Invention = global.selected_invention
+var convincibility: float
 
 func _ready():
 	patent = patent_collection.get_all()[0]
@@ -15,13 +16,19 @@ func _ready():
 
 func _on_Shape_pressed():
 	print("Invention propability: %f" % invention.shape)
-	print(invention.sue_shape(0.2))
+	process_outcome(invention.sue_shape(convincibility))
 
 func _on_Charisma_pressed():
-	print(invention.sue_charisma(0.2))
+	process_outcome(invention.sue_charisma(convincibility))
 
 func _on_Color_pressed():
-	print(invention.sue_color(0.2))
+	process_outcome(invention.sue_color(convincibility))
 
 func _on_Function_pressed():
-	print(invention.sue_function(0.2))
+	process_outcome(invention.sue_function(convincibility))
+
+func process_outcome(won: bool) -> void:
+	if won:
+		pass
+	else:
+		pass
