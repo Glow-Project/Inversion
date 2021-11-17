@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=8 format=2]
+[gd_resource type="Theme" load_steps=9 format=2]
 
 [ext_resource path="res://assets/visual/fonts/description.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=12]
 anti_aliasing = false
@@ -59,6 +62,7 @@ corner_radius_bottom_left = 5
 
 [resource]
 ItemList/fonts/font = ExtResource( 1 )
+ItemList/styles/bg = SubResource( 14 )
 ItemList/styles/selected = SubResource( 12 )
 ItemList/styles/selected_focus = SubResource( 13 )
 VScrollBar/icons/decrement = null
