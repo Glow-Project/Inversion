@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/patent_app_tileset.png-b662e2e7c9edf9f68409fc4a1d3d07b1.stex"
+path="res://.import/patent_app_tileset-export.png-fdf05f16c472d30b2d1c019788b28814.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/ui/patent_app_tileset.png"
-dest_files=[ "res://.import/patent_app_tileset.png-b662e2e7c9edf9f68409fc4a1d3d07b1.stex" ]
+source_file="res://assets/visual/ui/patent_app_tileset-export.png"
+dest_files=[ "res://.import/patent_app_tileset-export.png-fdf05f16c472d30b2d1c019788b28814.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

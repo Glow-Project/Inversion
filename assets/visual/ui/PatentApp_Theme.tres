@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=12 format=2]
+[gd_resource type="Theme" load_steps=14 format=2]
 
 [ext_resource path="res://assets/visual/fonts/description.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/visual/speaker_off.png" type="Texture" id=2]
 [ext_resource path="res://assets/visual/speaker_on.png" type="Texture" id=3]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 1, 0, 0, 0 )
@@ -14,6 +15,11 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id=13]
+
+[sub_resource type="DynamicFont" id=16]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.447059, 0.447059, 0.447059, 1 )
@@ -80,6 +86,7 @@ ItemList/fonts/font = ExtResource( 1 )
 ItemList/styles/bg = SubResource( 14 )
 ItemList/styles/selected = SubResource( 12 )
 ItemList/styles/selected_focus = SubResource( 13 )
+Label/fonts/font = SubResource( 16 )
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null
