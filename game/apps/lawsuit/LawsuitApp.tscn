@@ -75,9 +75,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Draft" type="Sprite" parent="VisibleInvention"]
-position = Vector2( 60, 30 )
-centered = false
+[node name="Draft" type="TextureRect" parent="VisibleInvention"]
+margin_left = 56.0
+margin_top = 31.0
+margin_right = 136.0
+margin_bottom = 88.0
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Titel" type="Label" parent="VisibleInvention"]
 margin_left = 57.0

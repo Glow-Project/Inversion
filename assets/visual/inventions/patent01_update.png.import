@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/patent01_round_corners.png-9ad4ebd02b789bb1143ec780874aa6b7.stex"
+path="res://.import/patent01_update.png-a9df6ea641bcd61b2686dd15d06abe9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/patents/patent01_round_corners.png"
-dest_files=[ "res://.import/patent01_round_corners.png-9ad4ebd02b789bb1143ec780874aa6b7.stex" ]
+source_file="res://assets/visual/inventions/patent01_update.png"
+dest_files=[ "res://.import/patent01_update.png-a9df6ea641bcd61b2686dd15d06abe9e.stex" ]
 
 [params]
 
@@ -24,7 +24,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

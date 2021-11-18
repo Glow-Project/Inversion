@@ -81,9 +81,9 @@ __meta__ = {
 margin_left = 9.0
 margin_top = 56.0
 margin_right = 103.0
-margin_bottom = 150.0
+margin_bottom = 151.0
 theme = ExtResource( 11 )
-custom_constants/vseparation = 8
+custom_constants/vseparation = 7
 custom_fonts/font = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -160,6 +160,7 @@ margin_right = 182.0
 margin_bottom = 103.0
 texture = ExtResource( 7 )
 expand = true
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
