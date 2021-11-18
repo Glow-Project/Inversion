@@ -1,14 +1,20 @@
-[gd_resource type="Theme" load_steps=14 format=2]
+[gd_resource type="Theme" load_steps=16 format=2]
 
 [ext_resource path="res://assets/visual/fonts/description.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/visual/speaker_off.png" type="Texture" id=2]
 [ext_resource path="res://assets/visual/speaker_on.png" type="Texture" id=3]
 [ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=4]
 
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0, 0.764706, 1, 0 )
+
 [sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 1, 0, 0, 0 )
 
-[sub_resource type="StyleBoxFlat" id=14]
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=17]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=12]
@@ -83,18 +89,20 @@ expand_margin_bottom = 1.0
 anti_aliasing = false
 
 [resource]
+Button/styles/focus = SubResource( 19 )
 CheckBox/icons/checked = ExtResource( 3 )
 CheckBox/icons/unchecked = ExtResource( 2 )
 CheckBox/styles/focus = SubResource( 15 )
-ItemList/colors/font_color = Color( 0.63, 0.63, 0.63, 1 )
+ItemList/colors/font_color = Color( 0.631373, 0.631373, 0.631373, 1 )
 ItemList/colors/font_color_selected = Color( 1, 1, 1, 1 )
-ItemList/colors/guide_color = Color( 0, 0, 0, 0.1 )
+ItemList/colors/guide_color = Color( 1, 1, 1, 0 )
 ItemList/constants/hseparation = 4
 ItemList/constants/icon_margin = 4
 ItemList/constants/line_separation = 2
 ItemList/constants/vseparation = 2
 ItemList/fonts/font = ExtResource( 1 )
-ItemList/styles/bg = SubResource( 14 )
+ItemList/styles/bg = SubResource( 18 )
+ItemList/styles/bg_focus = SubResource( 17 )
 ItemList/styles/selected = SubResource( 12 )
 ItemList/styles/selected_focus = SubResource( 13 )
 Label/fonts/font = SubResource( 16 )

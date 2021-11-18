@@ -204,7 +204,6 @@ texture_hover = ExtResource( 13 )
 texture_disabled = ExtResource( 20 )
 
 [node name="News" type="TextureButton" parent="Apps"]
-anchor_right = 9.0
 margin_left = 20.0
 margin_right = 36.0
 margin_bottom = 16.0

@@ -12,9 +12,11 @@ func sync_state():
 	$VisibleInvention/Draft.texture = current_invention.draft
 
 	$PatentList.clear()
-	for patent in patent_collection.get_all():
-		print(str(patent))
-		$PatentList.add_item(str(patent))
+	
+	var patents =  patent_collection.get_all()
+	for i in range(len(patents)):
+		$PatentList.add_item(str(patents[i]))
+		$PatentList.set_item_tooltip_enabled(i,false)
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")

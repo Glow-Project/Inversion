@@ -2,8 +2,10 @@ extends Control
 
 
 func _ready():
-	for patent in patent_collection.get_all():
-		$PatentList.add_item(patent.name)
+	var patents =  patent_collection.get_all()
+	for i in range(len(patents)):
+		$PatentList.add_item(patents[i].name)
+		$PatentList.set_item_tooltip_enabled(i,false)
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
