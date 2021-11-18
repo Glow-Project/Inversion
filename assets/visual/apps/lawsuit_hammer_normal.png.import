@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lawsuit_hammer.png-f68e119e62fc9a7d3f88cae62e5e541d.stex"
+path="res://.import/lawsuit_hammer_normal.png-658abc9881ae1d9089e94c6506c44399.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/lawsuit_hammer.png"
-dest_files=[ "res://.import/lawsuit_hammer.png-f68e119e62fc9a7d3f88cae62e5e541d.stex" ]
+source_file="res://assets/visual/apps/lawsuit_hammer_normal.png"
+dest_files=[ "res://.import/lawsuit_hammer_normal.png-658abc9881ae1d9089e94c6506c44399.stex" ]
 
 [params]
 
