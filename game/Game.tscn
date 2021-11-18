@@ -9,14 +9,14 @@
 [ext_resource path="res://assets/visual/bay_1.png" type="Texture" id=7]
 [ext_resource path="res://assets/visual/bay_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/visual/patent_app.png" type="Texture" id=9]
-[ext_resource path="res://assets/visual/news_app.png" type="Texture" id=10]
+[ext_resource path="res://assets/visual/apps/news_app_new_selected.png" type="Texture" id=10]
 [ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=12]
 [ext_resource path="res://assets/visual/apps/patent_app_white.png" type="Texture" id=13]
 [ext_resource path="res://assets/visual/apps/lawsuit_hammer_white.png" type="Texture" id=14]
-[ext_resource path="res://assets/visual/apps/news_app_white.png" type="Texture" id=15]
+[ext_resource path="res://assets/visual/apps/news_app_new_normal.png" type="Texture" id=15]
 [ext_resource path="res://assets/visual/apps/bank_app_white.png" type="Texture" id=16]
-[ext_resource path="res://assets/visual/apps/news_app_deactivated.png" type="Texture" id=17]
+[ext_resource path="res://assets/visual/apps/news_app_new_disabled.png" type="Texture" id=17]
 [ext_resource path="res://assets/visual/apps/lawsuit_hammer_deactivated.png" type="Texture" id=18]
 [ext_resource path="res://assets/visual/apps/bank_app_deactivated.png" type="Texture" id=19]
 [ext_resource path="res://assets/visual/apps/patent_app_deactivated.png" type="Texture" id=20]
@@ -204,12 +204,13 @@ texture_hover = ExtResource( 13 )
 texture_disabled = ExtResource( 20 )
 
 [node name="News" type="TextureButton" parent="Apps"]
+anchor_right = 9.0
 margin_left = 20.0
 margin_right = 36.0
 margin_bottom = 16.0
 disabled = true
-texture_normal = ExtResource( 10 )
-texture_hover = ExtResource( 15 )
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 10 )
 texture_disabled = ExtResource( 17 )
 
 [node name="Lawsuits" type="TextureButton" parent="Apps"]
