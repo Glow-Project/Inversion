@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/court_flip_char.png-28375ab1694b87a56b768daa01fd5557.stex"
+path="res://.import/Bob_idle_16x16.png-d7bfa8d4525a80735b6072738d9efdd3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/court_flip_char.png"
-dest_files=[ "res://.import/court_flip_char.png-28375ab1694b87a56b768daa01fd5557.stex" ]
+source_file="res://assets/visual/Characters/Bob_idle_16x16.png"
+dest_files=[ "res://.import/Bob_idle_16x16.png-d7bfa8d4525a80735b6072738d9efdd3.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

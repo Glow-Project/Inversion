@@ -150,4 +150,5 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="Sue" to="." method="_on_Sue_pressed"]
 [connection signal="item_selected" from="PatentList" to="." method="_on_PatentList_item_selected"]

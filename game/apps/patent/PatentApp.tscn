@@ -12,6 +12,9 @@
 [ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=10]
 [ext_resource path="res://assets/visual/ui/PatentApp_Theme.tres" type="Theme" id=11]
 
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
 [sub_resource type="DynamicFont" id=2]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
@@ -95,6 +98,7 @@ margin_top = 5.71867
 margin_right = 248.988
 margin_bottom = 20.7187
 rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.89, 0.6764, 0.089, 1 )
 custom_colors/font_color_shadow = Color( 0.63, 0.21462, 0.0504, 1 )
 custom_fonts/font = SubResource( 2 )
@@ -109,6 +113,7 @@ margin_left = 120.777
 margin_top = 18.45
 margin_right = 327.777
 margin_bottom = 34.45
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.905882, 0.905882, 0.905882, 1 )
 custom_colors/font_color_shadow = Color( 0.454902, 0.454902, 0.454902, 1 )
 custom_fonts/font = SubResource( 3 )
@@ -132,10 +137,11 @@ __meta__ = {
 [node name="PatentDescription" type="RichTextLabel" parent="."]
 margin_left = 200.813
 margin_top = 47.0
-margin_right = 308.813
-margin_bottom = 150.0
-theme = ExtResource( 11 )
+margin_right = 349.0
+margin_bottom = 186.0
+rect_scale = Vector2( 0.75, 0.75 )
 custom_fonts/normal_font = SubResource( 4 )
+custom_constants/line_separation = 1
 text = "Next generation high speed serial bus connector. 
 
 - triangle shaped 
