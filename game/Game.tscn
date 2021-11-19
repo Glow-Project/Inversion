@@ -207,7 +207,6 @@ texture_disabled = ExtResource( 20 )
 margin_left = 20.0
 margin_right = 36.0
 margin_bottom = 16.0
-disabled = true
 texture_normal = ExtResource( 15 )
 texture_hover = ExtResource( 10 )
 texture_disabled = ExtResource( 17 )
