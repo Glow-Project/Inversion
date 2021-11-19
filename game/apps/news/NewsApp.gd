@@ -1,5 +1,8 @@
 extends Control
 
+var invention1:Invention
+var invention2:Invention
+
 func _ready():
 	var inventions = invention_collection.get_random(2)
 	
@@ -7,17 +10,20 @@ func _ready():
 		print("Inventions array has only %d items" % [len(inventions)])
 		return
 	
-	$Invention_1.texture = inventions[0].draft
-	$Invention_1/InventionLabel1.text = inventions[0].name
+	invention1 = inventions[0]
+	invention2 = inventions[1]
 	
-	$Invention_2.texture = inventions[1].draft
-	$Invention_2/InventionLabel2.text = inventions[1].name
+	$Invention_1.texture = invention1.draft
+	$Invention_1/InventionLabel1.text = invention1.name
+	
+	$Invention_2.texture = invention2.draft
+	$Invention_2/InventionLabel2.text = invention2.name
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
 
 func _on_SelectButton1_pressed():
-	pass
+	global.selected_invention = invention1
 
 func _on_Sue2_pressed():
-	pass
+	global.selected_invention = invention2
