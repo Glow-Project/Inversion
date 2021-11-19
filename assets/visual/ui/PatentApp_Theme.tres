@@ -89,6 +89,7 @@ expand_margin_bottom = 1.0
 anti_aliasing = false
 
 [resource]
+Button/fonts/font = ExtResource( 1 )
 Button/styles/focus = SubResource( 19 )
 CheckBox/icons/checked = ExtResource( 3 )
 CheckBox/icons/unchecked = ExtResource( 2 )
@@ -106,6 +107,7 @@ ItemList/styles/bg_focus = SubResource( 17 )
 ItemList/styles/selected = SubResource( 12 )
 ItemList/styles/selected_focus = SubResource( 13 )
 Label/fonts/font = SubResource( 16 )
+RichTextLabel/fonts/normal_font = ExtResource( 1 )
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null
