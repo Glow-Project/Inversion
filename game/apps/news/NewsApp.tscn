@@ -151,7 +151,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="InventionLabel1" type="Label" parent="Invention_2"]
+[node name="InventionLabel2" type="Label" parent="Invention_2"]
 margin_left = -1.0
 margin_top = 63.0
 margin_right = 237.0
