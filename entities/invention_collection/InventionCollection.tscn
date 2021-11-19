@@ -34,47 +34,47 @@ script = ExtResource( 2 )
 draft = ExtResource( 3 )
 description = "This is a loading screen of a very innovative game made by Dark Energy Studios.
 The screen is supposed to indicate wether or not it is loading, and how much has already got loaded."
-patent_id = [ "#128.2/a4" ]
+patent_id = "#128.2/a4"
 
 [node name="Installer" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 4 )
 description = "An installer that is used for installing software on the hardware, while visually indicating the progress."
-patent_id = [ "#128.2/a4" ]
+patent_id = "#128.2/a4"
 
 [node name="Updater" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 5 )
 description = "Software that is used for updating certain software."
-patent_id = [ "#128.2/a4" ]
+patent_id = "#128.2/a4"
 
 [node name="Battery" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 6 )
 description = "A battery bar representing the remaining energy in the battery of the device."
-patent_id = [ "#128.2/a4" ]
+patent_id = "#128.2/a4"
 
 [node name="Scrollbar" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 7 )
 description = "A bar used for scrolling through text that is too large for the screen to be displayed at once. "
-patent_id = [ "#128.2/a4" ]
+patent_id = "#128.2/a4"
 
 [node name="Camera" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 8 )
 description = "Vintage camera with high-speed TSB connector."
-patent_id = [ "#512.1/c9" ]
+patent_id = "#512.1/c9"
 
 [node name="Printer" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 9 )
 description = "Print documents and pictures with the high-speed TSB connector"
-patent_id = [ "#512.1/c9" ]
+patent_id = "#512.1/c9"
 
 [node name="Hub" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 10 )
 description = "Connect multiple TSB devices, like a camera or printer, via our hub together."
-patent_id = [ "#512.1/c9" ]
+patent_id = "#512.1/c9"
 
 [node name="TSB hacker" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 12 )
 description = "Sniff and manipulate packets transmit via the TSB connector."
-patent_id = [ "#512.1/c9" ]
+patent_id = "#512.1/c9"
 color = 0.5
 function = 0.7
 shape = 0.2
@@ -82,12 +82,12 @@ shape = 0.2
 [node name="Immersion bed" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 11 )
 description = "The immersion bed let's you dive into beautiful foreign worlds powered by TSB."
-patent_id = [ "#512.1/c9" ]
+patent_id = "#512.1/c9"
 
 [node name="Aluminati Badge" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 10 )
 description = "Identify your conspirancy friends with the Aluminati badge."
-patent_id = [ "#512.1/c9" ]
+patent_id = "#512.1/c9"
 color = 0.2
 function = 0.3
 shape = 0.2
@@ -95,7 +95,7 @@ shape = 0.2
 [node name="Watch" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 13 )
 description = "High precision watch with audio recording function. Just press the red button and start speaking."
-patent_id = [ "#64.5/a4" ]
+patent_id = "#64.5/a4"
 color = 0.75
 function = 0.65
 shape = 0.15
@@ -103,7 +103,7 @@ shape = 0.15
 [node name="Hotplate" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 14 )
 description = "A hot plate that warms up quickly. The two plates look a bit like an old-fashioned cassette."
-patent_id = [ "#64.5/a4" ]
+patent_id = "#64.5/a4"
 color = 0.4
 function = 0.1
 shape = 0.75
@@ -111,7 +111,7 @@ shape = 0.75
 [node name="Kill switch" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 15 )
 description = "Turn off electrical devices immediately by smashing the big red button."
-patent_id = [ "#64.5/a4" ]
+patent_id = "#64.5/a4"
 color = 0.7
 function = 0.15
 shape = 0.2
@@ -119,14 +119,14 @@ shape = 0.2
 [node name="Base cap" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 16 )
 description = "Base cap with camera and display recording the count of people looking at the display."
-patent_id = [ "#64.5/a4" ]
+patent_id = "#64.5/a4"
 color = 0.25
 function = 0.75
 
 [node name="Lost walkman" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 17 )
 description = "Submission for the Godot Wild Jam 35."
-patent_id = [ "#64.5/a4" ]
+patent_id = "#64.5/a4"
 color = 0.4
 function = 0.75
 shape = 0.75
@@ -134,7 +134,7 @@ shape = 0.75
 [node name="Fridge" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 18 )
 description = "Cools down your food bottom line."
-patent_id = [ "#32.9/p3" ]
+patent_id = "#32.9/p3"
 color = 0.4
 function = 0.7
 shape = 0.2
@@ -142,13 +142,13 @@ shape = 0.2
 [node name="Shamrock" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 19 )
 description = "Literal luck with hand-crafted shamrocks. 100% success garantee."
-patent_id = [ "#32.9/p3" ]
+patent_id = "#32.9/p3"
 shape = 0.75
 
 [node name="Ventilator" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 20 )
 description = "Cools down your face in seconds. Perfectly for hot summers."
-patent_id = [ "#32.9/p3" ]
+patent_id = "#32.9/p3"
 color = 0.75
 function = 0.75
 shape = 0.75
@@ -156,13 +156,13 @@ shape = 0.75
 [node name="Eternal light" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 26 )
 description = "This light will glow for you until eternity. Don't lick or touch with your eyes! The 'radioactive'-alike sign is just a fan!"
-patent_id = [ "#32.9/p3" ]
+patent_id = "#32.9/p3"
 shape = 0.75
 
 [node name="Mobile" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 25 )
 description = "Those trinangle-shaped little things will dandle you to sleep."
-patent_id = [ "#2.3/u4" ]
+patent_id = "#2.3/u4"
 color = 0.75
 function = 0.2
 shape = 0.65
@@ -170,7 +170,7 @@ shape = 0.65
 [node name="Alien mask" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 21 )
 description = "Green mask that tranforms you in the old fashioned '74 alien, \"that never existed\". Faith in humanity, inversed!"
-patent_id = [ "#2.3/u4" ]
+patent_id = "#2.3/u4"
 color = 0.7
 function = 0.15
 shape = 0.1
@@ -178,7 +178,7 @@ shape = 0.1
 [node name="Pro player" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 23 )
 description = "Player for your favorite MPEG or flash videos! Doesn't need any updates, forever!"
-patent_id = [ "#2.3/u4" ]
+patent_id = "#2.3/u4"
 color = 0.2
 function = 0.75
 shape = 0.75
@@ -186,7 +186,7 @@ shape = 0.75
 [node name="Arrow key poster" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 22 )
 description = " This detail will spice up your gamer lifestyle. Show every vistor of your residence that you have tru style!"
-patent_id = [ "#2.3/u4" ]
+patent_id = "#2.3/u4"
 color = 0.15
 function = 0.1
 shape = 0.65
@@ -194,8 +194,7 @@ shape = 0.65
 [node name="Speaker" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 24 )
 description = "Special hand-crafted speaker."
-patent_id = [ "#2.3/u4" ]
+patent_id = "#2.3/u4"
 color = 0.15
 function = 0.75
 shape = 0.1
-

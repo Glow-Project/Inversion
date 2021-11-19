@@ -193,14 +193,6 @@ region = Rect2( 176, 136, 16, 17 )
 atlas = ExtResource( 7 )
 region = Rect2( 192, 136, 16, 17 )
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 7 )
-region = Rect2( 176, 136, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 7 )
-region = Rect2( 192, 136, 16, 17 )
-
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ) ],
