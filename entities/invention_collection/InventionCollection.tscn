@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://entities/invention/Invention.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/invention_collection/InventionCollection.gd" type="Script" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://assets/visual/inventions/patent06_speaker.png" type="Texture" id=24]
 [ext_resource path="res://assets/visual/inventions/patent06_mobile.png" type="Texture" id=25]
 [ext_resource path="res://assets/visual/inventions/patent05_glow_stick.png" type="Texture" id=26]
+[ext_resource path="res://assets/visual/inventions/patent03_aluminati.png" type="Texture" id=27]
 
 [node name="InventionCollection" type="Node2D"]
 script = ExtResource( 2 )
@@ -85,7 +86,7 @@ description = "The immersion bed let's you dive into beautiful foreign worlds po
 patent_id = [ "#512.1/c9" ]
 
 [node name="Aluminati Badge" parent="." instance=ExtResource( 1 )]
-draft = ExtResource( 10 )
+draft = ExtResource( 27 )
 description = "Identify your conspirancy friends with the Aluminati badge."
 patent_id = [ "#512.1/c9" ]
 
