@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NewsApp.mp3-dc1ba76a8c4a636c1638cb21862659b6.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/voice/tutorial/NewsApp.mp3"
+dest_files=[ "res://.import/NewsApp.mp3-dc1ba76a8c4a636c1638cb21862659b6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

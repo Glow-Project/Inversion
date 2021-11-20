@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LawsuitApp.mp3-84ea84b1cfea867eea287f638d14732b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/voice/tutorial/LawsuitApp.mp3"
+dest_files=[ "res://.import/LawsuitApp.mp3-84ea84b1cfea867eea287f638d14732b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

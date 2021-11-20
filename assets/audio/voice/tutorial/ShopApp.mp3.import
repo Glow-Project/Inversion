@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ShopApp.mp3-9d7eb35138b43256f7d413213345fc96.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/voice/tutorial/ShopApp.mp3"
+dest_files=[ "res://.import/ShopApp.mp3-9d7eb35138b43256f7d413213345fc96.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
