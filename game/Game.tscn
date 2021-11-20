@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=1]
 [ext_resource path="res://game/Game.gd" type="Script" id=2]
@@ -140,7 +140,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0.2 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
@@ -152,7 +152,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0.2 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
@@ -164,10 +164,34 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Subtitles:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "" ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Subtitles:rect_position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 35, 116 ) ]
 }
 
 [sub_resource type="Animation" id=1]
@@ -296,7 +320,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 5.7, 67.3, 69.7 ),
+"times": PoolRealArray( 0, 5.7, 67.4, 69.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -308,7 +332,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 5.7, 67.5, 69.9 ),
+"times": PoolRealArray( 0, 5.7, 67.4, 69.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -332,7 +356,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 5.7, 67.5, 69.8 ),
+"times": PoolRealArray( 0, 5.7, 67.4, 69.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -344,7 +368,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 5.7, 67.5, 69.9 ),
+"times": PoolRealArray( 0, 5.7, 67.4, 69.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -392,7 +416,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 20.5, 26.6, 35.7, 40.9, 46.1, 57.3, 63.8, 67.6 ),
+"times": PoolRealArray( 20.5, 26.6, 35.7, 41.4, 46.1, 57.3, 63.8, 67.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, false, false, false, false, false, false, false ]
@@ -408,6 +432,30 @@ tracks/11/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Subtitles:text")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.1, 1.7, 3, 5, 6.5, 8.5, 13, 15.2, 17, 22.2, 24, 28.5, 30, 32.7, 36.5, 43.3, 44.7, 48.5, 50.8, 56.3, 59, 61, 66.8, 68.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "Welcome to your new job", "I am going to explain you", "a few things about your work here", "try to listen closely", "if you want to avoid getting fired", "your goal is to buy patents and sue inventions that incrude your patents", "pretty simple, right?", "this is the patent app", "here you can read through your patents and see what exactly they cover", "this is the news app", "here you can select an invention that you want to sue", "this is the lawsuit app", "after you selected an invention from the news app", "you can here prepare yourself for the court, and sue them", "when you're in court you can select between multiple arguments to sue the invention", "this is the shop", "here you can buy new patents", "on the left you can see your current balance", "yesterday I saw an ad about a house on the bahamas that costs 1.400.000$", "Just so you know", "below that you can see your skills", "you can increase your skills by buying new patents in the shop", "Good luck suing!", "" ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Subtitles:rect_position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 28.4, 28.5, 48, 48.001, 48.1, 58.5, 58.501, 58.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 35, 116 ), Vector2( 35, 116 ), Vector2( 35, 34.037 ), Vector2( 35, 34.037 ), Vector2( 35, 34.037 ), Vector2( 35, 116 ), Vector2( 35, 116 ), Vector2( 35, 116 ), Vector2( 35, 34 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -472,6 +520,12 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
 
+[sub_resource type="DynamicFont" id=8]
+size = 8
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
+
 [node name="Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -522,8 +576,8 @@ centered = false
 
 [node name="Bahamas4" type="Sprite" parent="Background"]
 modulate = Color( 0.270455, 0.270455, 0.270455, 0 )
-position = Vector2( -0.533283, 6.53925 )
-scale = Vector2( 6.69366, 4.45997 )
+position = Vector2( -0.533283, -0.608371 )
+scale = Vector2( 6.69366, 4.44876 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -777,6 +831,21 @@ texture_scale = 0.25
 color = Color( 0.862745, 0.862745, 0.862745, 1 )
 energy = 0.0
 shadow_enabled = true
+
+[node name="Subtitles" type="Label" parent="."]
+margin_left = 35.0
+margin_top = 116.0
+margin_right = 289.002
+margin_bottom = 169.0
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="Apps/Patents" to="." method="_on_Patents_pressed"]
