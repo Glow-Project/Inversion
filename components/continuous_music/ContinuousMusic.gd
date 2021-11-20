@@ -1,8 +1,13 @@
 extends AudioStreamPlayer
 
 export var music_name: String
+export var play_directly: bool = true
 
 func _ready():
+	if play_directly: 
+		start_playing()
+
+func start_playing():
 	if settings.gets("music"):
 		play(global.audio_timestamps[music_name])
 
