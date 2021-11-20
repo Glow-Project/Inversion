@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PatentApp.mp3-f2983147e162c3e9c5dc79813c839280.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/voice/tutorial/PatentApp.mp3"
+dest_files=[ "res://.import/PatentApp.mp3-f2983147e162c3e9c5dc79813c839280.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

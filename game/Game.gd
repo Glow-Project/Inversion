@@ -15,6 +15,10 @@ func _ready():
 		$AnimationPlayer.play("RESET")
 	sync_state()
 
+func _process(_delta):
+	if Input.is_action_just_pressed("skip") and $AnimationPlayer.current_animation == "tutorial":
+		$AnimationPlayer.playback_speed = 50
+
 func sync_state():
 	$Apps/Lawsuits.disabled = global.selected_invention == null
 	$Money.text = "$ %d" % bank_account.current_money
@@ -25,13 +29,26 @@ func sync_state():
 	$Skills/Function/Value.text = "%.1f" % skills.function
 
 func _on_Patents_pressed():
-	get_tree().change_scene("res://game/apps/patent/PatentApp.tscn")
+	if !$AnimationPlayer.is_playing():
+		get_tree().change_scene("res://game/apps/patent/PatentApp.tscn")
 
 func _on_News_pressed():
-	get_tree().change_scene("res://game/apps/news/NewsApp.tscn")
+	if !$AnimationPlayer.is_playing():
+		get_tree().change_scene("res://game/apps/news/NewsApp.tscn")
 
 func _on_Lawsuits_pressed():
-	get_tree().change_scene("res://game/apps/lawsuit/LawsuitApp.tscn")
+	if !$AnimationPlayer.is_playing():
+		get_tree().change_scene("res://game/apps/lawsuit/LawsuitApp.tscn")
 
 func _on_Shop_pressed():
-	get_tree().change_scene("res://game/apps/shop/ShopApp.tscn")
+	if !$AnimationPlayer.is_playing():
+		get_tree().change_scene("res://game/apps/shop/ShopApp.tscn")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name: String):
+	if anim_name == "enter":
+		$AnimationPlayer.play("tutorial")
+	elif anim_name == "tutorial":
+		# This Node does weird things when not deleted
+		$Call.queue_free()
+	$AnimationPlayer.playback_speed = 1

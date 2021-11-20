@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Balance.mp3-d34db3ed6ede431926850f7e2b0a529a.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/voice/tutorial/Balance.mp3"
+dest_files=[ "res://.import/Balance.mp3-d34db3ed6ede431926850f7e2b0a529a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
