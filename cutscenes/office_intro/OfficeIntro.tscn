@@ -195,11 +195,6 @@ region = Rect2( 160, 136, 16, 17 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "sad",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "angry",
@@ -208,6 +203,11 @@ animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ) ],
 "loop": false,
 "name": "init_angry",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "sad",
 "speed": 5.0
 } ]
 
