@@ -8,7 +8,7 @@ onready var decisions = [
 ]
 
 func _ready():
-	if global.moblie:
+	if global.mobile:
 		$Decisions/AnimationPlayer.play("rotate_decisions")
 
 func select_decision(index: int):
