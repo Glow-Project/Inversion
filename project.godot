@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "BankAccount",
+"language": "GDScript",
+"path": "res://scripts/BankAccount.gd"
+}, {
 "base": "Node2D",
 "class": "Invention",
 "language": "GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://addons/SettingsManager/Settings.gd"
 } ]
 _global_script_class_icons={
+"BankAccount": "",
 "Invention": "",
 "Patent": "",
 "Settings": ""
@@ -42,6 +48,7 @@ settings="*res://scripts/InitSettings.gd"
 global="*res://scripts/Global.gd"
 invention_collection="*res://entities/invention_collection/InventionCollection.tscn"
 patent_collection="*res://entities/patent_collection/PatentCollection.tscn"
+bank_account="*res://scripts/BankAccount.gd"
 
 [debug]
 

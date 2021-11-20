@@ -4,6 +4,10 @@ onready var patents: Array = []
 
 func _ready():
 	load_patents()
+	
+	# I know I know tihs should be here BUT
+	# The inventions can first be generated when the PatentCollection is ready :(
+	global.regenerate_inventions()
 
 func load_patents() -> void:
 	for child in get_children():

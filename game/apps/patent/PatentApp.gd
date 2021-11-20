@@ -2,17 +2,20 @@ extends Control
 
 
 func _ready():
-	var patents =  patent_collection.get_all()
+	var patents =  patent_collection.get_owned()
 	for i in range(len(patents)):
 		$PatentList.add_item(patents[i].name)
 		$PatentList.set_item_tooltip_enabled(i,false)
+
+	# Select default
+	_on_PatentList_item_selected(0)
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
 
 
 func _on_PatentList_item_selected(index):
-	var collection = patent_collection.get_all()
+	var collection = patent_collection.get_owned()
 	if index > len(collection)-1:
 		print("Invalid selected patent with index %d, while the max index is %d" % [index, len(collection)])
 		return

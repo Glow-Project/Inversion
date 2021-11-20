@@ -10,3 +10,10 @@ export var owned: bool = false
 
 func _to_string():
 	return "%s - %s" % [id, name]
+
+func buy() -> bool:
+	if owned == true or !bank_account.withdraw(price):
+		return false
+
+	owned = true
+	return true
