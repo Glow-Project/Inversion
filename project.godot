@@ -44,9 +44,12 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Inversion"
+config/name="Bahama Banana"
+config/description="A Game made by Pour Entertainment for the Godot Wild Jam #39
+
+Buy Patents and sue people interfering your patents!"
 run/main_scene="res://cutscenes/intro/Intro.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/visual/Other/BahamaBananaType2.png"
 
 [autoload]
 
