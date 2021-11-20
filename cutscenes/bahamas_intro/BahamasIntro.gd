@@ -1,6 +1,7 @@
 extends Node2D
 
 var skipable = false
+var touched = false
 export var music: AudioStream
 
 func _ready():
@@ -9,8 +10,12 @@ func _ready():
 func _exit_tree():
 	global.audio_timestamps["bahamas"] = $Music.get_playback_position()
 
+func _input(event):
+	if skipable and event is InputEventScreenTouch:
+		touched = true
+
 func _process(_delta):
-	if skipable and Input.is_action_just_pressed("skip"):
+	if skipable and (Input.is_action_just_pressed("skip") or touched):
 		skipable = false
 		$AnimationPlayer.play("into_banana")
 
