@@ -16,14 +16,14 @@ extra_spacing_top = 5
 font_data = ExtResource( 2 )
 
 [node name="PatentArticle" type="Control"]
-anchor_left = -0.14
-anchor_top = -0.233
-anchor_right = 0.167
-anchor_bottom = 0.256
-margin_left = 10.8
-margin_top = 6.28
-margin_right = -11.44
-margin_bottom = -6.96
+anchor_left = -0.053
+anchor_top = -0.094
+anchor_right = 0.05
+anchor_bottom = 0.087
+margin_left = 16.96
+margin_top = 15.04
+margin_right = 50.0
+margin_bottom = 44.08
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,8 +49,8 @@ margin_left = -0.132431
 margin_top = -2.55691
 margin_right = 64.8676
 margin_bottom = 11.4431
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.00784314, 0.858824, 0.301961, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Name"
 align = 1
 __meta__ = {
@@ -61,10 +61,23 @@ __meta__ = {
 margin_top = 43.0
 margin_right = 65.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0.988235, 0.133333, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "???? USD"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BuyButton" type="Button" parent="."]
+margin_left = 11.4859
+margin_top = 55.7015
+margin_right = 77.4859
+margin_bottom = 75.7015
+rect_scale = Vector2( 0.6, 0.6 )
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BuyButton" to="." method="_on_BuyButton_pressed"]

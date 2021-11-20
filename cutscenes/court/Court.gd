@@ -35,17 +35,21 @@ func _on_Function_pressed():
 
 func process_outcome(won: bool) -> void:
 	print("Won: %s" % won)
-
 	if won:
 		# The stuff that is supposed to happen when the player wins the case
 		$AnimationPlayer.play("win")
+		global.win_money()
 	else:
 		# The stuff that is supposed to happen when the player loses the case
-		$AnimationPlayer.play("lose")
+		#$AnimationPlayer.play("lose")
+		global.lose_money()
+		_on_AnimationPlayer_animation_finished("lose")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name in ["win", "lose"]:
+		global.regenerate_inventions()
+		global.selected_invention = null
 		get_tree().change_scene("res://game/Game.tscn")
 
 

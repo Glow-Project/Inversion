@@ -36,101 +36,129 @@ draft = ExtResource( 3 )
 description = "This is a loading screen of a very innovative game made by Dark Energy Studios.
 The screen is supposed to indicate wether or not it is loading, and how much has already got loaded."
 patent_id = "#128.2/a4"
+color = 0.45
+function = 1.0
+shape = 0.8
 
 [node name="Installer" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 4 )
 description = "An installer that is used for installing software on the hardware, while visually indicating the progress."
 patent_id = "#128.2/a4"
+color = 0.4
+function = 1.0
+shape = 0.25
 
 [node name="Updater" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 5 )
 description = "Software that is used for updating certain software."
 patent_id = "#128.2/a4"
+color = 1.0
+function = 0.7
+shape = 0.25
 
 [node name="Battery" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 6 )
 description = "A battery bar representing the remaining energy in the battery of the device."
 patent_id = "#128.2/a4"
+color = 0.25
+function = 0.65
+shape = 1.0
 
 [node name="Scrollbar" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 7 )
 description = "A bar used for scrolling through text that is too large for the screen to be displayed at once. "
 patent_id = "#128.2/a4"
+color = 0.25
+function = 0.25
+shape = 0.85
 
 [node name="Camera" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 8 )
 description = "Vintage camera with high-speed TSB connector."
 patent_id = "#512.1/c9"
+color = 0.25
+function = 1.0
+shape = 0.25
 
 [node name="Printer" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 9 )
 description = "Print documents and pictures with the high-speed TSB connector"
 patent_id = "#512.1/c9"
+color = 0.7
+function = 0.9
+shape = 0.9
 
 [node name="Hub" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 10 )
 description = "Connect multiple TSB devices, like a camera or printer, via our hub together."
 patent_id = "#512.1/c9"
+color = 0.9
+function = 0.9
+shape = 0.9
 
 [node name="TSB hacker" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 12 )
 description = "Sniff and manipulate packets transmit via the TSB connector."
 patent_id = "#512.1/c9"
 color = 0.5
-function = 0.7
+function = 1.0
 shape = 0.2
 
 [node name="Immersion bed" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 11 )
 description = "The immersion bed let's you dive into beautiful foreign worlds powered by TSB."
 patent_id = "#512.1/c9"
+color = 0.8
+function = 0.9
+shape = 0.8
 
 [node name="Aluminati Badge" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 27 )
 description = "Identify your conspirancy friends with the Aluminati badge."
 patent_id = "#512.1/c9"
-color = 0.2
-function = 0.3
-shape = 0.2
+color = 0.7
+function = 0.25
+shape = 1.0
 
 [node name="Watch" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 13 )
 description = "High precision watch with audio recording function. Just press the red button and start speaking."
 patent_id = "#64.5/a4"
-color = 0.75
-function = 0.65
-shape = 0.15
+color = 1.0
+function = 0.6
+shape = 0.8
 
 [node name="Hotplate" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 14 )
 description = "A hot plate that warms up quickly. The two plates look a bit like an old-fashioned cassette."
 patent_id = "#64.5/a4"
-color = 0.4
+color = 0.85
 function = 0.1
-shape = 0.75
+shape = 1.0
 
 [node name="Kill switch" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 15 )
 description = "Turn off electrical devices immediately by smashing the big red button."
 patent_id = "#64.5/a4"
-color = 0.7
+color = 1.0
 function = 0.15
-shape = 0.2
+shape = 0.4
 
 [node name="Base cap" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 16 )
 description = "Base cap with camera and display recording the count of people looking at the display."
 patent_id = "#64.5/a4"
-color = 0.25
-function = 0.75
+color = 1.0
+function = 0.7
+shape = 0.3
 
 [node name="Lost walkman" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 17 )
 description = "Submission for the Godot Wild Jam 35."
 patent_id = "#64.5/a4"
-color = 0.4
-function = 0.75
-shape = 0.75
+color = 0.5
+function = 1.0
+shape = 1.0
 
 [node name="Fridge" parent="." instance=ExtResource( 1 )]
 draft = ExtResource( 18 )

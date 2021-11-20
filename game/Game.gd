@@ -9,6 +9,8 @@ func _ready():
 		$AnimationPlayer.play("enter")
 		global.game_already_started = true
 
+	$Money.text = "$ %d" % bank_account.current_money
+	$Apps/Lawsuits.disabled = global.selected_invention == null
 
 func _on_Patents_pressed():
 	get_tree().change_scene("res://game/apps/patent/PatentApp.tscn")

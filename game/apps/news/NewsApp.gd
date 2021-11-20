@@ -1,11 +1,11 @@
 extends Control
 
-var invention1:Invention
-var invention2:Invention
+var invention1: Invention
+var invention2: Invention
+
+onready var inventions = global.inventions
 
 func _ready():
-	var inventions = invention_collection.get_random(2)
-	
 	if len(inventions) != 2:
 		print("Inventions array has only %d items" % [len(inventions)])
 		return
@@ -24,6 +24,8 @@ func _on_Back_pressed():
 
 func _on_SelectButton1_pressed():
 	global.selected_invention = invention1
+	print(global.selected_invention.name)
 
 func _on_Sue2_pressed():
 	global.selected_invention = invention2
+	print(global.selected_invention.name)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=1]
 [ext_resource path="res://game/Game.gd" type="Script" id=2]
@@ -22,6 +22,21 @@
 [ext_resource path="res://assets/visual/apps/patent_app_deactivated.png" type="Texture" id=20]
 [ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=21]
 [ext_resource path="res://components/mute_music/MuteMusic.tscn" type="PackedScene" id=22]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 160, 80 ) ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "enter"
@@ -107,6 +122,11 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
 
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
+
 [node name="Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -121,6 +141,7 @@ stream = ExtResource( 12 )
 music_name = "bahamas"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 5 )
 anims/enter = SubResource( 1 )
 
 [node name="Background" type="Node2D" parent="."]
@@ -152,8 +173,8 @@ centered = false
 
 [node name="Bahamas4" type="Sprite" parent="Background"]
 modulate = Color( 0.270455, 0.270455, 0.270455, 0 )
-position = Vector2( -1.15659, -0.460747 )
-scale = Vector2( 6.70144, 4.45997 )
+position = Vector2( -0.783283, -0.460747 )
+scale = Vector2( 6.69366, 4.45997 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -234,6 +255,19 @@ margin_top = 97.2992
 margin_right = -43.4787
 margin_bottom = -39.7008
 rect_scale = Vector2( 3, 3 )
+
+[node name="Money" type="Label" parent="."]
+margin_left = 5.3102
+margin_top = 145.868
+margin_right = 106.31
+margin_bottom = 156.868
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "$ 1.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Apps/Patents" to="." method="_on_Patents_pressed"]
 [connection signal="pressed" from="Apps/News" to="." method="_on_News_pressed"]

@@ -40,9 +40,9 @@ __meta__ = {
 
 [node name="Items" type="GridContainer" parent="."]
 margin_left = 62.0
-margin_top = 18.0
+margin_top = 11.0
 margin_right = 298.0
-margin_bottom = 146.0
+margin_bottom = 155.0
 custom_constants/vseparation = 75
 custom_constants/hseparation = 75
 columns = 3
