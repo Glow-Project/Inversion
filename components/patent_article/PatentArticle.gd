@@ -12,5 +12,5 @@ func _ready():
 
 
 func _on_BuyButton_pressed():
-	patent.buy()
-	emit_signal("bought")
+	if patent.buy():
+		emit_signal("bought")

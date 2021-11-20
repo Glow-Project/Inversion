@@ -1,0 +1,171 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://game/apps/skilling/Skilling.gd" type="Script" id=1]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/visual/Arguments/function_argument.png" type="Texture" id=3]
+[ext_resource path="res://assets/visual/Arguments/shape_argument_selected.png" type="Texture" id=4]
+[ext_resource path="res://assets/visual/Arguments/charisma3_arguments_selected.png" type="Texture" id=5]
+[ext_resource path="res://assets/visual/Arguments/color_argument_selected.png" type="Texture" id=6]
+[ext_resource path="res://assets/visual/Arguments/function_argument_selected.png" type="Texture" id=7]
+[ext_resource path="res://assets/visual/Arguments/color_argument.png" type="Texture" id=8]
+[ext_resource path="res://assets/visual/Arguments/shape_argument.png" type="Texture" id=9]
+[ext_resource path="res://assets/visual/Arguments/charisma3_arguments.png" type="Texture" id=10]
+[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=11]
+[ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "rotate_decisions"
+length = 8.0
+loop = true
+tracks/0/type = "method"
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "select_decision"
+}, {
+"args": [ 1 ],
+"method": "select_decision"
+}, {
+"args": [ 2 ],
+"method": "select_decision"
+}, {
+"args": [ 3 ],
+"method": "select_decision"
+} ]
+}
+
+[node name="Skilling" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 90.0943, 30.9282 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 160.0
+color = Color( 0.705882, 0.588235, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PatentName" type="Label" parent="."]
+margin_left = 51.6694
+margin_top = 7.62881
+margin_right = 288.669
+margin_bottom = 32.6288
+custom_colors/font_color = Color( 0.905882, 0.905882, 0.905882, 1 )
+custom_colors/font_color_shadow = Color( 0.454902, 0.454902, 0.454902, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "What do you want to skill?"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillName" type="Label" parent="."]
+margin_left = 44.7491
+margin_top = 100.608
+margin_right = 348.749
+margin_bottom = 125.608
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color = Color( 0.223529, 0.462745, 0.921569, 1 )
+custom_fonts/font = SubResource( 3 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Decisions" type="GridContainer" parent="."]
+margin_left = 81.2848
+margin_top = 56.9936
+margin_right = 157.285
+margin_bottom = 72.9936
+rect_scale = Vector2( 2, 2 )
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color" type="TextureButton" parent="Decisions"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 6 )
+texture_focused = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shape" type="TextureButton" parent="Decisions"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Charisma" type="TextureButton" parent="Decisions"]
+margin_left = 40.0
+margin_right = 56.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 5 )
+texture_focused = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Function" type="TextureButton" parent="Decisions"]
+margin_left = 60.0
+margin_right = 76.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 7 )
+texture_focused = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Decisions"]
+anims/rotate_decisions = SubResource( 2 )
+
+[node name="ContinuousMusic" parent="." instance=ExtResource( 12 )]
+stream = ExtResource( 11 )
+music_name = "bahamas"
+
+[connection signal="focus_entered" from="Decisions/Color" to="." method="_on_focus_entered" binds= [ "Color" ]]
+[connection signal="mouse_entered" from="Decisions/Color" to="." method="_on_focus_entered" binds= [ "Color" ]]
+[connection signal="pressed" from="Decisions/Color" to="." method="_on_Color_pressed"]
+[connection signal="focus_entered" from="Decisions/Shape" to="." method="_on_focus_entered" binds= [ "Shape" ]]
+[connection signal="mouse_entered" from="Decisions/Shape" to="." method="_on_focus_entered" binds= [ "Shape" ]]
+[connection signal="pressed" from="Decisions/Shape" to="." method="_on_Shape_pressed"]
+[connection signal="focus_entered" from="Decisions/Charisma" to="." method="_on_focus_entered" binds= [ "Charisma" ]]
+[connection signal="mouse_entered" from="Decisions/Charisma" to="." method="_on_focus_entered" binds= [ "Charisma" ]]
+[connection signal="pressed" from="Decisions/Charisma" to="." method="_on_Charisma_pressed"]
+[connection signal="focus_entered" from="Decisions/Function" to="." method="_on_focus_entered" binds= [ "Function" ]]
+[connection signal="mouse_entered" from="Decisions/Function" to="." method="_on_focus_entered" binds= [ "Function" ]]
+[connection signal="pressed" from="Decisions/Function" to="." method="_on_Function_pressed"]

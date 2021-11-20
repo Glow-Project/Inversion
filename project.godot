@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "Settings",
 "language": "GDScript",
 "path": "res://addons/SettingsManager/Settings.gd"
+}, {
+"base": "Node",
+"class": "Skills",
+"language": "GDScript",
+"path": "res://scripts/Skills.gd"
 } ]
 _global_script_class_icons={
 "BankAccount": "",
 "Invention": "",
 "Patent": "",
-"Settings": ""
+"Settings": "",
+"Skills": ""
 }
 
 [application]
@@ -49,6 +55,7 @@ global="*res://scripts/Global.gd"
 invention_collection="*res://entities/invention_collection/InventionCollection.tscn"
 patent_collection="*res://entities/patent_collection/PatentCollection.tscn"
 bank_account="*res://scripts/BankAccount.gd"
+skills="*res://scripts/Skills.gd"
 
 [debug]
 

@@ -13,9 +13,16 @@ func _ready():
 		global.was_in_court = false
 	else:
 		$AnimationPlayer.play("RESET")
+	sync_state()
 
-	$Money.text = "$ %d" % bank_account.current_money
+func sync_state():
 	$Apps/Lawsuits.disabled = global.selected_invention == null
+	$Money.text = "$ %d" % bank_account.current_money
+	
+	$Skills/Charisma/Value.text = "%.1f" % skills.charisma
+	$Skills/Shape/Value.text = "%.1f" % skills.shape
+	$Skills/Color/Value.text = "%.1f" % skills.color
+	$Skills/Function/Value.text = "%.1f" % skills.function
 
 func _on_Patents_pressed():
 	get_tree().change_scene("res://game/apps/patent/PatentApp.tscn")

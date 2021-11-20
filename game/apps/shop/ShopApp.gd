@@ -19,7 +19,7 @@ func sync_state():
 
 func bought():
 	global.regenerate_inventions()
-	sync_state()
+	get_tree().change_scene("res://game/apps/skilling/Skilling.tscn")
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")

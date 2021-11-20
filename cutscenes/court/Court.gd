@@ -8,7 +8,6 @@ onready var decisions = [
 	$Decisions.get_node("Charisma"), 
 	$Decisions.get_node("Function")
 ]
-var convincibility: float
 
 func _ready():
 	if null in [patent, invention]:
@@ -28,16 +27,16 @@ func _ready():
 	$World/FlipChartPatent/Patent.texture = patent.draft
 
 func _on_Shape_pressed():
-	process_outcome(invention.sue_shape(convincibility))
+	process_outcome(invention.sue_shape(skills.shape))
 
 func _on_Charisma_pressed():
-	process_outcome(invention.sue_charisma(convincibility))
+	process_outcome(invention.sue_charisma(skills.charisma))
 
 func _on_Color_pressed():
-	process_outcome(invention.sue_color(convincibility))
+	process_outcome(invention.sue_color(skills.color))
 
 func _on_Function_pressed():
-	process_outcome(invention.sue_function(convincibility))
+	process_outcome(invention.sue_function(skills.function))
 
 func process_outcome(won: bool) -> void:
 	print("Won: %s" % won)
