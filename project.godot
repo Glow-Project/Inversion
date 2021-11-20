@@ -45,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Inversion"
-run/main_scene="res://cutscenes/office_intro/OfficeIntro.tscn"
+run/main_scene="res://cutscenes/intro/Intro.tscn"
 config/icon="res://icon.png"
 
 [autoload]
