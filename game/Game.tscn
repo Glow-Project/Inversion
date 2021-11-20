@@ -250,7 +250,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "tutorial"
-length = 70.0
+length = 73.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("ContinuousMusic:volume_db")
 tracks/0/interp = 1
@@ -537,11 +537,10 @@ __meta__ = {
 
 [node name="ContinuousMusic" parent="." instance=ExtResource( 21 )]
 stream = ExtResource( 12 )
-volume_db = -20.0
 music_name = "bahamas"
 
 [node name="Call" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 29 )
+stream = ExtResource( 27 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 5 )
