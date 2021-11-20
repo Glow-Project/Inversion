@@ -47,3 +47,19 @@ func process_outcome(won: bool) -> void:
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name in ["win", "lose"]:
 		get_tree().change_scene("res://game/Game.tscn")
+
+
+func _on_Color_mouse_entered():
+	$ArgumentLabel.text = "COLOR"
+
+func _on_Shape_mouse_entered():
+	$ArgumentLabel.text = "SHAPE"
+
+func _on_Charisma_mouse_entered():
+	$ArgumentLabel.text = "CHARISMA"
+
+func _on_Function_mouse_entered():
+	$ArgumentLabel.text = "FUNCTION"
+
+func _on_mouse_exited():
+	$ArgumentLabel.text = "CHOOSE\nARGUMENT"
