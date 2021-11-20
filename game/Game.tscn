@@ -248,10 +248,10 @@ current = true
 [node name="Apps" type="GridContainer" parent="."]
 anchor_top = -9.53674e-08
 anchor_bottom = -9.53674e-08
-margin_left = 97.638
-margin_top = 44.5254
-margin_right = 264.638
-margin_bottom = 162.525
+margin_left = 98.0
+margin_top = 45.0
+margin_right = 134.0
+margin_bottom = 81.0
 rect_scale = Vector2( 3, 3 )
 columns = 2
 __meta__ = {
