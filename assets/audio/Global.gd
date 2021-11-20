@@ -22,6 +22,7 @@ func lose_money():
 
 func _ready():
 	audio_timestamps["bahamas"] = 0.0
+	audio_timestamps["sad_music"] = 0.0
 
 func regenerate_inventions():
 	var all_inventions_available: Array = []
