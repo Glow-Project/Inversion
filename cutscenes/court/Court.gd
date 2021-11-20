@@ -2,6 +2,12 @@ extends Node2D
 
 onready var patent: Patent = global.selected_patent
 onready var invention: Invention = global.selected_invention
+onready var decisions = [
+	$Decisions.get_node("Color"), 
+	$Decisions.get_node("Shape"), 
+	$Decisions.get_node("Charisma"), 
+	$Decisions.get_node("Function")
+]
 var convincibility: float
 
 func _ready():
@@ -41,18 +47,30 @@ func process_outcome(won: bool) -> void:
 		global.win_money()
 	else:
 		# The stuff that is supposed to happen when the player loses the case
-		#$AnimationPlayer.play("lose")
+		$AnimationPlayer.play("lose")
 		global.lose_money()
-		_on_AnimationPlayer_animation_finished("lose")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name in ["win", "lose"]:
 		global.regenerate_inventions()
 		global.selected_invention = null
+		global.was_in_court = true
 		get_tree().change_scene("res://game/Game.tscn")
 
+func play_mobile_decision():
+	if global.mobile:
+		$Decisions/AnimationPlayer.play("rotate_decisions")
 
+func select_decision(index: int):
+	var current_decision = decisions[index]
+	current_decision.grab_focus()
+	match current_decision.name:
+		"Color": _on_Color_mouse_entered()
+		"Shape": _on_Shape_mouse_entered()
+		"Charisma": _on_Charisma_mouse_entered()
+		"Function": _on_Function_mouse_entered()
+	
 func _on_Color_mouse_entered():
 	$ArgumentLabel.text = "COLOR"
 

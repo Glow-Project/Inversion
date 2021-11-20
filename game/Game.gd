@@ -8,6 +8,11 @@ func _ready():
 	if !global.game_already_started:
 		$AnimationPlayer.play("enter")
 		global.game_already_started = true
+	elif global.was_in_court:
+		$AnimationPlayer.play("from_court")
+		global.was_in_court = false
+	else:
+		$AnimationPlayer.play("RESET")
 
 	$Money.text = "$ %d" % bank_account.current_money
 	$Apps/Lawsuits.disabled = global.selected_invention == null

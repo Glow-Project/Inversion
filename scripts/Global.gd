@@ -2,6 +2,10 @@ extends Node
 
 var audio_timestamps: Dictionary
 var game_already_started: bool = false
+var was_in_court: bool = false
+
+var mobile: bool = false
+
 
 # 'Parameters' for court scene
 var selected_patent: Patent = null
@@ -19,6 +23,7 @@ func lose_money():
 
 func _ready():
 	audio_timestamps["bahamas"] = 0.0
+	print(OS.get_name())
 
 func regenerate_inventions():
 	var all_inventions_available: Array = []

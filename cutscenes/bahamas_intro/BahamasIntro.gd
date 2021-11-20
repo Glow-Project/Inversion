@@ -13,6 +13,7 @@ func _exit_tree():
 func _input(event):
 	if skipable and event is InputEventScreenTouch:
 		touched = true
+		global.mobile = true
 
 func _process(_delta):
 	if skipable and (Input.is_action_just_pressed("skip") or touched):
