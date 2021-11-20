@@ -44,7 +44,6 @@ func _on_Shop_pressed():
 	if !$AnimationPlayer.is_playing():
 		get_tree().change_scene("res://game/apps/shop/ShopApp.tscn")
 
-
 func _on_AnimationPlayer_animation_finished(anim_name: String):
 	if anim_name == "enter":
 		$AnimationPlayer.play("tutorial")
@@ -52,3 +51,6 @@ func _on_AnimationPlayer_animation_finished(anim_name: String):
 		# This Node does weird things when not deleted
 		$Call.queue_free()
 	$AnimationPlayer.playback_speed = 1
+
+func _on_HelpButton_pressed():
+	$HelpText.show()

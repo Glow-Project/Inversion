@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=1]
 [ext_resource path="res://game/Game.gd" type="Script" id=2]
@@ -34,6 +34,9 @@
 [ext_resource path="res://assets/audio/voice/tutorial/NewsApp.mp3" type="AudioStream" id=32]
 [ext_resource path="res://assets/audio/voice/tutorial/Tutorial1.mp3" type="AudioStream" id=33]
 [ext_resource path="res://assets/audio/voice/tutorial/ending.mp3" type="AudioStream" id=34]
+[ext_resource path="res://components/help_text/HelpText.tscn" type="PackedScene" id=35]
+[ext_resource path="res://assets/visual/ui/help_button_selected.png" type="Texture" id=36]
+[ext_resource path="res://assets/visual/ui/help_button_normal.png" type="Texture" id=37]
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -666,7 +669,7 @@ scale = Vector2( 0.99, 0.99 )
 tile_set = ExtResource( 23 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 196608, 0, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 196612, 1, 0, 262144, 6, 0, 262145, 11, 0, 262146, 11, 0, 262147, 11, 0, 262148, 7, 0, 327680, 4, 0, 327681, 10, 0, 327682, 10, 0, 327683, 10, 0, 327684, 5, 0, 393216, 6, 0, 393217, 11, 0, 393218, 11, 0, 393219, 11, 0, 393220, 7, 0, 393232, 9, 0, 458752, 6, 0, 458753, 11, 0, 458754, 11, 0, 458755, 11, 0, 458756, 7, 0, 524288, 6, 0, 524289, 11, 0, 524290, 11, 0, 524291, 11, 0, 524292, 7, 0, 589824, 2, 0, 589825, 9, 0, 589826, 9, 0, 589827, 9, 0, 589828, 3, 0 )
+tile_data = PoolIntArray( 196608, 0, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 196612, 1, 0, 262144, 6, 0, 262145, 11, 0, 262146, 11, 0, 262147, 11, 0, 262148, 7, 0, 327680, 4, 0, 327681, 10, 0, 327682, 10, 0, 327683, 10, 0, 327684, 5, 0, 393216, 6, 0, 393217, 11, 0, 393218, 11, 0, 393219, 11, 0, 393220, 7, 0, 458752, 6, 0, 458753, 11, 0, 458754, 11, 0, 458755, 11, 0, 458756, 7, 0, 524288, 6, 0, 524289, 11, 0, 524290, 11, 0, 524291, 11, 0, 524292, 7, 0, 589824, 2, 0, 589825, 9, 0, 589826, 9, 0, 589827, 9, 0, 589828, 3, 0 )
 
 [node name="Money" type="Label" parent="."]
 margin_left = 22.547
@@ -844,12 +847,31 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
 align = 1
 autowrap = true
+
+[node name="HelpButton" type="TextureButton" parent="."]
+modulate = Color( 0.682353, 0.682353, 0.682353, 1 )
+margin_left = 280.0
+margin_top = 5.0
+margin_right = 312.0
+margin_bottom = 36.0
+texture_normal = ExtResource( 37 )
+texture_hover = ExtResource( 36 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HelpText" parent="." instance=ExtResource( 35 )]
+visible = false
+text = "- BUY Patents in the SHOP.
+- Find bad inventions and  select them in the Patent  Protector app.
+- Sued a selected invention in  the lawsuit app.
+- View owned patents in the  patent app."
+title = "GAME"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="Apps/Patents" to="." method="_on_Patents_pressed"]
 [connection signal="pressed" from="Apps/News" to="." method="_on_News_pressed"]
 [connection signal="pressed" from="Apps/Lawsuits" to="." method="_on_Lawsuits_pressed"]
 [connection signal="pressed" from="Apps/Shop" to="." method="_on_Shop_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]

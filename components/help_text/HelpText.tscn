@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/visual/exit_button_white.png" type="Texture" id=1]
+[ext_resource path="res://assets/visual/exit_button.png" type="Texture" id=2]
+[ext_resource path="res://components/help_text/HelpText.gd" type="Script" id=3]
+[ext_resource path="res://assets/visual/ui/PatentApp.tres" type="TileSet" id=4]
+[ext_resource path="res://assets/visual/ui/help_button_normal.png" type="Texture" id=5]
+[ext_resource path="res://assets/visual/ui/PatentApp_Theme.tres" type="Theme" id=6]
+
+[node name="HelpText" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -23.4745, -69.1423 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI_Background" type="TileMap" parent="."]
+modulate = Color( 1, 0.960784, 0.2, 1 )
+position = Vector2( 63.7875, 0 )
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 6, 29, 0, 7, 35, 0, 8, 35, 0, 9, 35, 0, 10, 35, 0, 11, 35, 0, 12, 35, 0, 13, 35, 0, 14, 35, 0, 15, 30, 0, 65542, 31, 0, 65543, 40, 0, 65544, 40, 0, 65545, 40, 0, 65546, 40, 0, 65547, 40, 0, 65548, 40, 0, 65549, 40, 0, 65550, 40, 0, 65551, 32, 0, 131078, 29, 0, 131079, 35, 0, 131080, 35, 0, 131081, 35, 0, 131082, 35, 0, 131083, 35, 0, 131084, 35, 0, 131085, 35, 0, 131086, 35, 0, 131087, 30, 0, 196614, 33, 0, 196615, 39, 0, 196616, 39, 0, 196617, 39, 0, 196618, 39, 0, 196619, 39, 0, 196620, 39, 0, 196621, 39, 0, 196622, 39, 0, 196623, 34, 0, 262150, 33, 0, 262151, 39, 0, 262152, 39, 0, 262153, 39, 0, 262154, 39, 0, 262155, 39, 0, 262156, 39, 0, 262157, 39, 0, 262158, 39, 0, 262159, 34, 0, 327686, 33, 0, 327687, 39, 0, 327688, 39, 0, 327689, 39, 0, 327690, 39, 0, 327691, 39, 0, 327692, 39, 0, 327693, 39, 0, 327694, 39, 0, 327695, 34, 0, 393222, 33, 0, 393223, 39, 0, 393224, 39, 0, 393225, 39, 0, 393226, 39, 0, 393227, 39, 0, 393228, 39, 0, 393229, 39, 0, 393230, 39, 0, 393231, 34, 0, 458758, 33, 0, 458759, 39, 0, 458760, 39, 0, 458761, 39, 0, 458762, 39, 0, 458763, 39, 0, 458764, 39, 0, 458765, 39, 0, 458766, 39, 0, 458767, 34, 0, 524294, 33, 0, 524295, 39, 0, 524296, 39, 0, 524297, 39, 0, 524298, 39, 0, 524299, 39, 0, 524300, 39, 0, 524301, 39, 0, 524302, 39, 0, 524303, 34, 0, 589830, 31, 0, 589831, 40, 0, 589832, 40, 0, 589833, 40, 0, 589834, 40, 0, 589835, 40, 0, 589836, 40, 0, 589837, 40, 0, 589838, 40, 0, 589839, 32, 0 )
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 167.788
+margin_top = 40.0
+margin_right = 312.788
+margin_bottom = 152.0
+theme = ExtResource( 6 )
+text = "- BUY Patents in the SHOP.
+- Find bad inventions and
+  select them in the Patent
+  Protector app.
+- Sued a selected invention in
+  the lawsuit app.
+- View owned patents in the
+  patent app."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 191.788
+margin_top = 8.0
+margin_right = 312.788
+margin_bottom = 24.0
+theme = ExtResource( 6 )
+text = "GAME"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 167.788
+margin_top = 8.0
+margin_right = 191.788
+margin_bottom = 24.0
+texture = ExtResource( 5 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TextureButton" parent="."]
+margin_left = 292.78
+margin_top = 4.84561
+margin_right = 304.78
+margin_bottom = 16.8456
+rect_scale = Vector2( 2, 2 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Close" to="." method="_on_Back_pressed"]
