@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=1]
 [ext_resource path="res://game/Game.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://assets/visual/apps/patent_app_deactivated.png" type="Texture" id=20]
 [ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=21]
 [ext_resource path="res://components/mute_music/MuteMusic.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/visual/ui/PatentApp.tres" type="TileSet" id=23]
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -213,7 +214,7 @@ centered = false
 
 [node name="Bahamas4" type="Sprite" parent="Background"]
 modulate = Color( 0.270455, 0.270455, 0.270455, 0 )
-position = Vector2( -0.783283, -0.460747 )
+position = Vector2( -0.533283, 6.53925 )
 scale = Vector2( 6.69366, 4.45997 )
 texture = ExtResource( 1 )
 centered = false
@@ -296,15 +297,167 @@ margin_right = -43.4787
 margin_bottom = -39.7008
 rect_scale = Vector2( 3, 3 )
 
+[node name="UIControlBackground" type="TileMap" parent="."]
+modulate = Color( 0.164706, 0.803922, 1, 0.643137 )
+position = Vector2( 0, 0.5 )
+scale = Vector2( 0.99, 0.99 )
+tile_set = ExtResource( 23 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 196608, 0, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 196612, 1, 0, 262144, 6, 0, 262145, 11, 0, 262146, 11, 0, 262147, 11, 0, 262148, 7, 0, 327680, 4, 0, 327681, 10, 0, 327682, 10, 0, 327683, 10, 0, 327684, 5, 0, 393216, 6, 0, 393217, 11, 0, 393218, 11, 0, 393219, 11, 0, 393220, 7, 0, 393232, 9, 0, 458752, 6, 0, 458753, 11, 0, 458754, 11, 0, 458755, 11, 0, 458756, 7, 0, 524288, 6, 0, 524289, 11, 0, 524290, 11, 0, 524291, 11, 0, 524292, 7, 0, 589824, 2, 0, 589825, 9, 0, 589826, 9, 0, 589827, 9, 0, 589828, 3, 0 )
+
 [node name="Money" type="Label" parent="."]
-margin_left = 5.3102
-margin_top = 145.868
-margin_right = 106.31
-margin_bottom = 156.868
-rect_scale = Vector2( 0.8, 0.8 )
+margin_left = 22.547
+margin_top = 56.4631
+margin_right = 123.547
+margin_bottom = 67.4631
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "$ 1.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skills" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Skills"]
+margin_left = 20.5985
+margin_top = 83.4913
+margin_right = 124.599
+margin_bottom = 94.4913
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Skills"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Charisma" type="Label" parent="Skills"]
+margin_left = 34.0
+margin_top = 98.0
+margin_right = 122.0
+margin_bottom = 111.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Charisma:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Charisma"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 97.0
+margin_top = 0.415802
+margin_right = 125.0
+margin_bottom = 13.4158
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0.4"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shape" type="Label" parent="Skills"]
+margin_left = 49.4338
+margin_top = 108.554
+margin_right = 107.434
+margin_bottom = 119.554
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Shape:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Shape"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 66.796
+margin_top = -0.0561523
+margin_right = 94.796
+margin_bottom = 12.9438
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0.4"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color" type="Label" parent="Skills"]
+margin_left = 49.2072
+margin_top = 118.724
+margin_right = 107.207
+margin_bottom = 129.724
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Color:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Color"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 67.2679
+margin_top = -0.528076
+margin_right = 95.2679
+margin_bottom = 12.4719
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0.4"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Function" type="Label" parent="Skills"]
+margin_left = 34.0
+margin_top = 128.0
+margin_right = 122.0
+margin_bottom = 139.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Function:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Function"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 97.0
+margin_top = 0.415802
+margin_right = 125.0
+margin_bottom = 13.4158
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "0.4"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
