@@ -43,6 +43,10 @@ global="*res://scripts/Global.gd"
 invention_collection="*res://entities/invention_collection/InventionCollection.tscn"
 patent_collection="*res://entities/patent_collection/PatentCollection.tscn"
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=320
@@ -51,6 +55,10 @@ window/size/test_width=1020
 window/size/test_height=510
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[global]
+
+unused=false
 
 [input]
 
