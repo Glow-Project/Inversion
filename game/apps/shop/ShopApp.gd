@@ -16,6 +16,10 @@ func sync_state():
 		patent_article.patent = patent
 		patent_article.connect("bought", self, "bought")
 		$Items.add_child(patent_article)
+	
+	var bahamaHouse = load("res://components/bahama_article/BahamaArticle.tscn").instance()
+	bahamaHouse.connect("game_won",self , "_on_game_won")
+	$Items.add_child(bahamaHouse)
 
 func bought(patent: Patent):
 	global.append_new_inventions(patent)
@@ -24,3 +28,6 @@ func bought(patent: Patent):
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
+
+func _on_game_won():
+	print("GAME WON!")
