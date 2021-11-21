@@ -250,8 +250,6 @@ frames = SubResource( 5 )
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = -18.0
-pitch_scale = 0.838
 
 [node name="ContinuousMusic" parent="." instance=ExtResource( 7 )]
 stream = ExtResource( 8 )
