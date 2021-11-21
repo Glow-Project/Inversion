@@ -24,7 +24,9 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 8
-extra_spacing_char = 1
+outline_size = 1
+outline_color = Color( 0.152941, 0, 0, 1 )
+extra_spacing_bottom = 1
 font_data = ExtResource( 4 )
 
 [node name="PatentApp" type="Control"]
@@ -130,7 +132,7 @@ __meta__ = {
 }
 
 [node name="PatentDescription" type="RichTextLabel" parent="."]
-margin_left = 200.813
+margin_left = 200.0
 margin_top = 47.0
 margin_right = 349.0
 margin_bottom = 186.0
@@ -141,11 +143,6 @@ text = "Next generation high speed serial bus connector.
 
 - triangle shaped 
 - needs at least three attempts to plug it in right
-
--- DRAFT 
-
-
-
 
 1. connector
 2. blue cable indicating speed

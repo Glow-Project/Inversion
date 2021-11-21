@@ -698,4 +698,3 @@ __meta__ = {
 texture = ExtResource( 8 )
 texture_scale = 0.209001
 color = Color( 0.862745, 0.862745, 0.862745, 1 )
-energy = 1.0

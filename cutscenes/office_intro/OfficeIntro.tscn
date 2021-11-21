@@ -92,11 +92,9 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 12 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ "You are 
-working
+"values": [ "You are working
 in an
-open-source 
-company", "You are not
+open-source company", "You are not
 getting paid
 for your
 hard work" ]
@@ -188,14 +186,6 @@ tracks/12/keys = {
 } ]
 }
 
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 7 )
-region = Rect2( 144, 136, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 7 )
-region = Rect2( 160, 136, 16, 17 )
-
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 7 )
 region = Rect2( 176, 136, 16, 17 )
@@ -204,13 +194,16 @@ region = Rect2( 176, 136, 16, 17 )
 atlas = ExtResource( 7 )
 region = Rect2( 192, 136, 16, 17 )
 
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 7 )
+region = Rect2( 144, 136, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 7 )
+region = Rect2( 160, 136, 16, 17 )
+
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
-"loop": false,
-"name": "init_angry",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "angry",
@@ -220,15 +213,20 @@ animations = [ {
 "loop": true,
 "name": "sad",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": false,
+"name": "init_angry",
+"speed": 5.0
 } ]
 
 [sub_resource type="DynamicFont" id=7]
+size = 8
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [node name="OfficeIntro" type="Node2D"]
-modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -268,24 +266,23 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 67.8788, 160.168 )
+position = Vector2( 188.711, 40 )
 current = true
 zoom = Vector2( 0.25, 0.25 )
 
 [node name="IntroductionText" type="Label" parent="Camera2D"]
-modulate = Color( 0, 0, 0, 0 )
-margin_left = -38.0
-margin_top = -15.0834
-margin_right = 115.0
-margin_bottom = 49.9166
+margin_left = -39.0
+margin_top = -20.0
+margin_right = 119.0
+margin_bottom = 59.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = SubResource( 7 )
-text = "You are 
-working
-in an
-open-source 
-company"
+text = "You are not
+getting paid
+for your
+hard work"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
