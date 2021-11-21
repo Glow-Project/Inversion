@@ -13,10 +13,11 @@ func _ready():
 	if null in [patent, invention]:
 		get_tree().change_scene("res://game/Game.tscn")
 		return
-
+	
+	$Music.play()
 	$AnimationPlayer.play("show_court")
 
-	print("Name: %s\nShape Propability: %.2f\nColor Propability: %.2f\nFunction Propability: %.2f" % [invention.name, invention.shape, invention.color, invention.function])
+	#print("Name: %s\nShape Propability: %.2f\nColor Propability: %.2f\nFunction Propability: %.2f" % [invention.name, invention.shape, invention.color, invention.function])
 	
 	# If no patent or no invention is selected, exit to main scene
 	if patent == null or invention == null:
@@ -39,7 +40,7 @@ func _on_Function_pressed():
 	process_outcome(invention.sue_function(skills.function))
 
 func process_outcome(won: bool) -> void:
-	print("Won: %s" % won)
+	$Music.stop()
 	if won:
 		# The stuff that is supposed to happen when the player wins the case
 		$AnimationPlayer.play("win")

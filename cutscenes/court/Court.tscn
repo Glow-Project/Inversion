@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://assets/visual/tilesets/RoomBuilderFloors.png" type="Texture" id=1]
 [ext_resource path="res://assets/visual/Characters/Bob_phone_16x16.png" type="Texture" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://assets/visual/Arguments/function_argument_selected.png" type="Texture" id=18]
 [ext_resource path="res://assets/visual/ui/PatentApp_Theme.tres" type="Theme" id=19]
 [ext_resource path="res://assets/audio/sfx/cheering_crowd.wav" type="AudioStream" id=20]
+[ext_resource path="res://assets/audio/songs/homes_gamejam_version.mp3" type="AudioStream" id=21]
+[ext_resource path="res://assets/audio/sfx/court_loose.wav" type="AudioStream" id=22]
 
 [sub_resource type="TileSet" id=1]
 0/name = "RoomBuilderFloors.png 0"
@@ -81,50 +83,35 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 4 )
-region = Rect2( 32, 336, 32, 48 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 144, 32, 48 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 4 )
-region = Rect2( 128, 144, 32, 48 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 4 )
-region = Rect2( 224, 144, 32, 48 )
+region = Rect2( 128, 336, 32, 48 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 4 )
 region = Rect2( 320, 144, 32, 48 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 4 )
-region = Rect2( 128, 336, 32, 48 )
+region = Rect2( 32, 144, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 4 )
+region = Rect2( 224, 144, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 336, 32, 48 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 144, 32, 48 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
-"frames": [ SubResource( 13 ) ],
+"frames": [ SubResource( 12 ) ],
 "loop": true,
-"name": "P5",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 17 ) ],
-"loop": true,
-"name": "P1",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 15 ) ],
-"loop": true,
-"name": "P2",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 16 ) ],
-"loop": true,
-"name": "P3",
+"name": "P6",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ) ],
@@ -132,9 +119,24 @@ animations = [ {
 "name": "P4",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ) ],
+"frames": [ SubResource( 17 ) ],
 "loop": true,
-"name": "P6",
+"name": "P1",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ) ],
+"loop": true,
+"name": "P3",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "P5",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "P2",
 "speed": 5.0
 } ]
 
@@ -350,6 +352,20 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "audio"
+tracks/5/path = NodePath("SFX")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 22 )
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=21]
@@ -754,12 +770,16 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 393218, 0, 0, 393219, 0, 1, 393220, 0, 1, 393221, 0, 2, 393222, 0, 1, 393223, 0, 1, 393224, 0, 1, 393225, 0, 3, 393228, 0, 0, 393229, 0, 1, 393230, 0, 2, 393231, 0, 1, 393232, 0, 1, 393233, 0, 1, 393234, 0, 2, 393235, 0, 3, 524290, 0, 0, 524291, 0, 1, 524292, 0, 1, 524293, 0, 2, 524294, 0, 1, 524295, 0, 1, 524296, 0, 1, 524297, 0, 3, 524300, 0, 0, 524301, 0, 1, 524302, 0, 1, 524303, 0, 1, 524304, 0, 1, 524305, 0, 1, 524306, 0, 2, 524307, 0, 3, 655362, 0, 0, 655363, 0, 1, 655364, 0, 1, 655365, 0, 1, 655366, 0, 2, 655367, 0, 1, 655368, 0, 1, 655369, 0, 3, 655372, 0, 0, 655373, 0, 2, 655374, 0, 1, 655375, 0, 1, 655376, 0, 1, 655377, 0, 1, 655378, 0, 2, 655379, 0, 3, 786434, 0, 0, 786435, 0, 1, 786436, 0, 2, 786437, 0, 1, 786438, 0, 1, 786439, 0, 2, 786440, 0, 1, 786441, 0, 3, 786444, 0, 0, 786445, 0, 1, 786446, 0, 2, 786447, 0, 1, 786448, 0, 2, 786449, 0, 1, 786450, 0, 1, 786451, 0, 3 )
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -15.0
+
 [node name="SFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 13 )
+stream = ExtResource( 22 )
 
 [node name="SFX2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
-volume_db = -80.0
+volume_db = -5.0
 
 [node name="Confetti" type="Particles2D" parent="."]
 position = Vector2( 173.812, 60.4549 )
