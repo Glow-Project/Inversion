@@ -70,7 +70,7 @@ margin_top = -3.52547
 margin_right = 259.03
 margin_bottom = 26.4745
 theme = ExtResource( 6 )
-text = "Patent guard"
+text = "News APP"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -84,7 +84,7 @@ margin_right = 331.871
 margin_bottom = 46.8892
 rect_scale = Vector2( 0.5, 0.5 )
 theme = ExtResource( 6 )
-text = "PROTECT YOUR PROPERTY"
+text = "FIND THE LATEST Inventions"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -97,6 +97,9 @@ margin_right = 187.0
 margin_bottom = 100.0
 texture = ExtResource( 10 )
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SelectButton1" type="Button" parent="Invention_1"]
 margin_left = 1.0
