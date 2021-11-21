@@ -42,6 +42,7 @@ func _on_Sue_pressed():
 		printerr("Oh no! Nothing is selected")
 	elif selected_patent.id == current_invention.patent_id:
 		# When everything is ok
+		global.remove_invention(current_invention)
 		global.selected_patent = selected_patent
 		global.selected_invention = current_invention
 		get_tree().change_scene("res://cutscenes/court/Court.tscn")

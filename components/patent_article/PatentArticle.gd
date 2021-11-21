@@ -2,7 +2,7 @@ extends Control
 
 var patent: Patent
 
-signal bought
+signal bought(patent)
 
 func _ready():
 	$Draft.texture = patent.draft
@@ -13,4 +13,4 @@ func _ready():
 
 func _on_BuyButton_pressed():
 	if patent.buy():
-		emit_signal("bought")
+		emit_signal("bought", patent)
