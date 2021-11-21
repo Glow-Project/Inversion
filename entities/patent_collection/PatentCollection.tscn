@@ -16,50 +16,56 @@ draft = ExtResource( 4 )
 id = "#128.2/a4"
 description = "A bar showing the progress of a certain task by filling it with color.
 
-1. Bar containing the progress visual
+1. Bar containing the progress visual.
 
-2. Left progress indicated by an empty bar
+2. Left progress indicated by an empty bar.
 
-3. Finished progress indicated by a filled bar
+3. Finished progress indicated by a blue filled bar.
 
-4. Numeric value expression the finished progress in percent from 0 to 100"
+4. Numeric value expression the finished progress in percent from 0 to 100."
 price = 350
 owned = true
 
 [node name="Walkman" parent="." instance=ExtResource( 3 )]
 draft = ExtResource( 2 )
 id = "#64.5/a4"
-description = "A device used for playing back audio.
+description = "A device used for recording and  playing back audio.
 
-1. A button for recording audio
+1. Red button for recording.
 
-2. Buttons which manipulate the audio-flow
+2. Buttons which manipulate the audio-flow.
 
-3. Reel"
+3. Reel spinning the tape."
 price = 2734
 
 [node name="Fan" parent="." instance=ExtResource( 3 )]
 draft = ExtResource( 5 )
 id = "#32.9/p3"
-description = "Circulating metal that cools down air.
+description = "Circulating metal that cools down air. 
 
-1. "
+1. The frame holds everything together.
+
+2. The wings are rotating at pretty high speeds to cool everything down to almost zero Kelvin."
 price = 21875
 
 [node name="TSB" parent="." instance=ExtResource( 3 )]
 draft = ExtResource( 7 )
 id = "#512.1/c9"
-description = "TSB  - Triangle Serial Bus is an interface used to connect  two electronical components for sending and retreiving data.
+description = "The Triangle Serial Bus is an interface used to connect  two electronical components for sending and retreiving data. It is shaped like a triangle.
 
-1. Connector
+1. Connector.
 
-2. Blue cable indicating speed
+2. Blue cable indicating speed.
 
-3. Isolator to keep the speed inside"
+3. Isolator to keep the speed inside."
 price = 90000
 
 [node name="Play Button" parent="." instance=ExtResource( 3 )]
 draft = ExtResource( 6 )
 id = "#2.3/u4"
-description = "A button that, when pressed, starts a certain task or action."
+description = "A button that, when pressed, starts playing a video or music.
+
+1. Plate that holds the play emblem and can get pressed.
+
+2. Play emblem, green and shaped like an arrow."
 price = 175000

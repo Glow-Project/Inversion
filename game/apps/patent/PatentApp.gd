@@ -9,6 +9,7 @@ func _ready():
 
 	# Select default
 	_on_PatentList_item_selected(0)
+	$PatentList.select(0,true)
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
