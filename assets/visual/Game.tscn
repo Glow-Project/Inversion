@@ -1,0 +1,930 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://assets/visual/ui/PatentApp.tres" type="TileSet" id=1]
+[ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://components/mute_music/MuteMusic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://game/Game.gd" type="Script" id=5]
+[ext_resource path="res://assets/visual/apps/news_app_new_disabled.png" type="Texture" id=6]
+[ext_resource path="res://assets/visual/apps/patent_app_deactivated.png" type="Texture" id=7]
+[ext_resource path="res://assets/visual/apps/lawsuit_hammer_disabledl.png" type="Texture" id=8]
+[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=9]
+[ext_resource path="res://assets/visual/apps/bank_app_deactivated.png" type="Texture" id=10]
+[ext_resource path="res://assets/visual/bay_3.png" type="Texture" id=11]
+[ext_resource path="res://assets/visual/bay_2.png" type="Texture" id=12]
+[ext_resource path="res://assets/visual/bank_app.png" type="Texture" id=13]
+[ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=14]
+[ext_resource path="res://assets/visual/SimpleBanana.png" type="Texture" id=15]
+[ext_resource path="res://assets/visual/lawsuit_hammer.png" type="Texture" id=16]
+[ext_resource path="res://assets/visual/bay_1.png" type="Texture" id=17]
+[ext_resource path="res://assets/visual/patent_app.png" type="Texture" id=18]
+[ext_resource path="res://assets/visual/apps/news_app_new_selected.png" type="Texture" id=19]
+[ext_resource path="res://assets/visual/apps/patent_app_white.png" type="Texture" id=20]
+[ext_resource path="res://assets/visual/apps/lawsuit_hammer_selected.png" type="Texture" id=21]
+[ext_resource path="res://assets/visual/apps/news_app_new_normal.png" type="Texture" id=22]
+[ext_resource path="res://assets/visual/apps/bank_app_white.png" type="Texture" id=23]
+[ext_resource path="res://assets/audio/voice/tutorial/Tutorial1.mp3" type="AudioStream" id=24]
+[ext_resource path="res://assets/audio/voice/tutorial/PatentApp.mp3" type="AudioStream" id=25]
+[ext_resource path="res://assets/audio/voice/tutorial/ShopApp.mp3" type="AudioStream" id=26]
+[ext_resource path="res://assets/audio/voice/tutorial/LawsuitApp.mp3" type="AudioStream" id=27]
+[ext_resource path="res://assets/audio/voice/tutorial/Arguments.mp3" type="AudioStream" id=28]
+[ext_resource path="res://assets/audio/voice/tutorial/Skills.mp3" type="AudioStream" id=29]
+[ext_resource path="res://assets/visual/keyboard_buttons/E.png" type="Texture" id=30]
+[ext_resource path="res://assets/audio/voice/tutorial/Tutorial2FIXED.mp3" type="AudioStream" id=31]
+[ext_resource path="res://assets/audio/voice/tutorial/Balance.mp3" type="AudioStream" id=32]
+[ext_resource path="res://assets/audio/voice/tutorial/NewsApp.mp3" type="AudioStream" id=33]
+[ext_resource path="res://assets/audio/voice/tutorial/ending.mp3" type="AudioStream" id=34]
+[ext_resource path="res://assets/visual/Other/light.png" type="Texture" id=35]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 160, 80 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Light:energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 125.477, 70.662 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Background:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Apps:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Money:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skills:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Titel:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Banana:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.819608, 0.211765, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Subtitles:text")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "" ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Subtitles:rect_position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 35, 116 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("SkipAdvice:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("ContinuousMusic:volume_db")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10.0 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "enter"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 2.21914, 1 ),
+"update": 0,
+"values": [ Vector2( 220.145, 26.493 ), Vector2( 160, 80 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 2.21914, 1 ),
+"update": 0,
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "from_court"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1.93187, 1 ),
+"update": 0,
+"values": [ Vector2( 160, 8.714 ), Vector2( 160, 80 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 2.37842, 1 ),
+"update": 0,
+"values": [ Vector2( 0.005, 0.005 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "tutorial"
+length = 73.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ContinuousMusic:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 70, 71.5 ),
+"transitions": PoolRealArray( 1, 3.86374, 1 ),
+"update": 0,
+"values": [ -20.0, -20.0, -10.0 ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("Call")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.698807,
+"start_offset": 0.0,
+"stream": ExtResource( 24 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 31 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 25 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 33 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 27 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 28 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 32 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 29 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 34 )
+} ],
+"times": PoolRealArray( 0, 9.1, 17, 24.3, 30.4, 38.5, 45.4, 50.4, 60.9, 68.9 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Background:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Apps:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skills:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Banana:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.819608, 0.211765, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Titel:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Money:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 5.5, 69.5, 72.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Light:energy")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.1, 17.3, 18.7, 21.2, 21.7, 24.3, 25.5, 28.6, 29.4, 30.4, 31.5, 42.3, 42.9, 45.3, 46.4, 48.6, 49.3, 50.3, 51.2, 59.2, 59.9, 60.8, 61.7, 66.5, 68.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 2.0, 2.0, 0.0, 0.0, 2.0, 2.0, 0.0, 0.0, 2.0, 2.0, 0.0, 0.0, 2.0, 2.0, 0.0, 0.0, 2.0, 2.0, 0.0, 0.0, 2.0, 2.0, 0.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Light:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 21.1, 24.3, 29.3, 30.3, 30.4, 42.9, 43.5, 45.3, 49.5, 50.1, 59.9, 60.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 125.477, 70.662 ), Vector2( 125.477, 70.662 ), Vector2( 183.423, 71.1936 ), Vector2( 183.423, 71.1936 ), Vector2( 183.423, 71.1936 ), Vector2( 121.225, 130.734 ), Vector2( 121.225, 130.734 ), Vector2( 121.225, 130.734 ), Vector2( 183.423, 130.202 ), Vector2( 183.423, 130.202 ), Vector2( 18.5369, 68.183 ), Vector2( 18.5369, 68.183 ), Vector2( 39.3022, 118.208 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Call:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 8, 16.3, 22.6, 28.7, 37.8, 43.5, 48.2, 59.4, 65.9, 69.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, false, false, false, false, false, false, false, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Light:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Subtitles:text")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.1, 1.7, 3, 5, 6.5, 9.2, 14.7, 17.3, 19.1, 24.3, 26.1, 30.6, 32.1, 34.8, 38.6, 45.4, 46.8, 50.6, 52.9, 58.4, 61.1, 63.1, 68.9, 70.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "Welcome to your new job", "I am going to explain you", "a few things about your work here", "try to listen closely", "if you want to avoid getting fired", "your goal is to buy patents and sue the inventions that infringe your patent", "pretty simple, right?", "this is the patent app", "here you can read through your patents and see what exactly they cover", "this is the news app", "here you can select an invention that you want to sue", "this is the lawsuit app", "after you selected an invention from the news app", "you can here prepare yourself for the court, and sue them", "when you're in court you can select between multiple arguments to sue the invention", "this is the shop", "here you can buy new patents", "on the left you can see your current balance", "yesterday I saw an ad about a house on the bahamas that costs 1.400.000$", "Just so you know", "below that you can see your skills", "you can increase your skills by buying new patents in the shop", "Good luck suing!", "" ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Subtitles:rect_position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 30.5, 30.6, 50.1, 50.2, 60.6, 60.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 35, 116 ), Vector2( 35, 116 ), Vector2( 35, 34.037 ), Vector2( 35, 34.037 ), Vector2( 35, 116 ), Vector2( 35, 116 ), Vector2( 35, 34 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("SkipAdvice:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 70.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 60.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bahamas1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 14, 16, 58, 60 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bahamas2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 14, 16, 29, 31 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bahamas3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 29, 31, 44, 46 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Bahamas4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 44, 46, 58.1, 60.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 8
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 8
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 30 )
+region = Rect2( 8, 0, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ContinuousMusic" parent="." instance=ExtResource( 2 )]
+stream = ExtResource( 9 )
+music_name = "bahamas"
+
+[node name="Call" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 29 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 5 )
+anims/enter = SubResource( 1 )
+anims/from_court = SubResource( 6 )
+anims/tutorial = SubResource( 7 )
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2( -0.374588, 0.374573 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+anims/diashow = SubResource( 2 )
+
+[node name="Bahamas1" type="Sprite" parent="Background"]
+position = Vector2( 0, -0.464039 )
+scale = Vector2( 1.06834, 0.832715 )
+texture = ExtResource( 17 )
+centered = false
+
+[node name="Bahamas2" type="Sprite" parent="Background"]
+modulate = Color( 0.85, 0.85, 0.85, 0 )
+position = Vector2( 0, -0.486136 )
+scale = Vector2( 1.0684, 0.831596 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="Bahamas3" type="Sprite" parent="Background"]
+modulate = Color( 0.410345, 0.410345, 0.410345, 0 )
+position = Vector2( 0, -0.53033 )
+scale = Vector2( 4.78391, 3.14879 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Bahamas4" type="Sprite" parent="Background"]
+modulate = Color( 0.270455, 0.270455, 0.270455, 0 )
+position = Vector2( -0.533283, -0.608371 )
+scale = Vector2( 6.69366, 4.44876 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="Titel" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 8.0
+margin_right = 141.0
+margin_bottom = 22.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.552941, 0.313726, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Bahama"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Banana" type="Sprite" parent="."]
+modulate = Color( 1, 0.819608, 0.211765, 1 )
+position = Vector2( 226.038, 19.3772 )
+scale = Vector2( 2.80219, 2.66035 )
+texture = ExtResource( 15 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 80 )
+current = true
+
+[node name="Apps" type="GridContainer" parent="."]
+anchor_top = -9.53674e-08
+anchor_bottom = -9.53674e-08
+margin_left = 98.0
+margin_top = 45.0
+margin_right = 134.0
+margin_bottom = 81.0
+rect_scale = Vector2( 3, 3 )
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Patents" type="TextureButton" parent="Apps"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 20 )
+texture_disabled = ExtResource( 7 )
+
+[node name="News" type="TextureButton" parent="Apps"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 22 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 6 )
+
+[node name="Lawsuits" type="TextureButton" parent="Apps"]
+margin_top = 20.0
+margin_right = 16.0
+margin_bottom = 36.0
+texture_normal = ExtResource( 16 )
+texture_hover = ExtResource( 21 )
+texture_disabled = ExtResource( 8 )
+
+[node name="Shop" type="TextureButton" parent="Apps"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 36.0
+margin_bottom = 36.0
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 23 )
+texture_disabled = ExtResource( 10 )
+
+[node name="MuteMusic" parent="." instance=ExtResource( 3 )]
+margin_left = 251.521
+margin_top = 97.2992
+margin_right = -43.4787
+margin_bottom = -39.7008
+rect_scale = Vector2( 3, 3 )
+
+[node name="UIControlBackground" type="TileMap" parent="."]
+modulate = Color( 0.164706, 0.803922, 1, 0.643137 )
+position = Vector2( 0, 0.5 )
+scale = Vector2( 0.99, 0.99 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 196608, 0, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 196612, 1, 0, 262144, 6, 0, 262145, 11, 0, 262146, 11, 0, 262147, 11, 0, 262148, 7, 0, 327680, 4, 0, 327681, 10, 0, 327682, 10, 0, 327683, 10, 0, 327684, 5, 0, 393216, 6, 0, 393217, 11, 0, 393218, 11, 0, 393219, 11, 0, 393220, 7, 0, 458752, 6, 0, 458753, 11, 0, 458754, 11, 0, 458755, 11, 0, 458756, 7, 0, 524288, 6, 0, 524289, 11, 0, 524290, 11, 0, 524291, 11, 0, 524292, 7, 0, 589824, 2, 0, 589825, 9, 0, 589826, 9, 0, 589827, 9, 0, 589828, 3, 0 )
+
+[node name="Money" type="Label" parent="."]
+margin_left = 22.547
+margin_top = 56.4631
+margin_right = 123.547
+margin_bottom = 67.4631
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "$ 1.000.000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skills" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Skills"]
+margin_left = 20.5985
+margin_top = 83.4913
+margin_right = 124.599
+margin_bottom = 94.4913
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Skills"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Charisma" type="Label" parent="Skills"]
+margin_left = 36.3978
+margin_top = 117.638
+margin_right = 124.398
+margin_bottom = 130.638
+rect_scale = Vector2( 0.45, 0.45 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Charisma:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Charisma"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 97.0
+margin_top = 0.415802
+margin_right = 125.0
+margin_bottom = 13.4158
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "intern"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shape" type="Label" parent="Skills"]
+margin_left = 49.1083
+margin_top = 108.021
+margin_right = 107.109
+margin_bottom = 119.021
+rect_scale = Vector2( 0.45, 0.45 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Shape:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Shape"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 66.796
+margin_top = -0.0561523
+margin_right = 94.796
+margin_bottom = 12.9438
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "intern"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color" type="Label" parent="Skills"]
+margin_left = 48.7861
+margin_top = 98.4114
+margin_right = 106.786
+margin_bottom = 109.411
+rect_scale = Vector2( 0.45, 0.45 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Color:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Color"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 67.2679
+margin_top = -0.528076
+margin_right = 95.2679
+margin_bottom = 12.4719
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "intern"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Function" type="Label" parent="Skills"]
+margin_left = 35.5049
+margin_top = 127.644
+margin_right = 123.505
+margin_bottom = 138.644
+rect_scale = Vector2( 0.45, 0.45 )
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Function:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Skills/Function"]
+modulate = Color( 0.337255, 0.392157, 1, 1 )
+margin_left = 97.0
+margin_top = 0.415802
+margin_right = 125.0
+margin_bottom = 13.4158
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "intern"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Light" type="Light2D" parent="."]
+visible = false
+position = Vector2( 125.477, 70.662 )
+texture = ExtResource( 35 )
+texture_scale = 0.25
+color = Color( 0.862745, 0.862745, 0.862745, 1 )
+energy = 0.0
+shadow_enabled = true
+
+[node name="Subtitles" type="Label" parent="."]
+margin_left = 35.0
+margin_top = 116.0
+margin_right = 289.002
+margin_bottom = 169.0
+rect_pivot_offset = Vector2( -56.3383, 27.4711 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkipAdvice" type="Label" parent="."]
+visible = false
+margin_left = 244.414
+margin_top = 3.92893
+margin_right = 317.414
+margin_bottom = 9.92893
+custom_fonts/font = SubResource( 9 )
+text = "press     to skip"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EKey" type="AnimatedSprite" parent="SkipAdvice"]
+position = Vector2( 31.5136, 3.59975 )
+frames = SubResource( 12 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="pressed" from="Apps/Patents" to="." method="_on_Patents_pressed"]
+[connection signal="pressed" from="Apps/News" to="." method="_on_News_pressed"]
+[connection signal="pressed" from="Apps/Lawsuits" to="." method="_on_Lawsuits_pressed"]
+[connection signal="pressed" from="Apps/Shop" to="." method="_on_Shop_pressed"]

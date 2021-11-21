@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/awakening-instrumental-1165.mp3-e619ea32f1bced3a4b11985a53b01127.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/awakening-instrumental-1165.mp3"
+dest_files=[ "res://.import/awakening-instrumental-1165.mp3-e619ea32f1bced3a4b11985a53b01127.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

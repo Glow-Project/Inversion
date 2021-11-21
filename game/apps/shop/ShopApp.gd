@@ -27,7 +27,11 @@ func bought(patent: Patent):
 	get_tree().change_scene("res://game/apps/skilling/Skilling.tscn")
 
 func _on_Back_pressed():
-	get_tree().change_scene("res://game/Game.tscn")
+	if !$AnimationPlayer.is_playing():
+		get_tree().change_scene("res://game/Game.tscn")
 
 func _on_game_won():
-	print("GAME WON!")
+	$AnimationPlayer.play("go_bahama")
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	get_tree().change_scene("res://cutscenes/outro/Outro.tscn")

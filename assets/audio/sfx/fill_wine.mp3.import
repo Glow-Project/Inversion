@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fill_wine.mp3-06af8a3f0a90979ce0b22556cea053a8.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/fill_wine.mp3"
+dest_files=[ "res://.import/fill_wine.mp3-06af8a3f0a90979ce0b22556cea053a8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

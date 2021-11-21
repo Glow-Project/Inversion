@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/champagne_POP.mp3-f15e1868ebd800f863d7cb9c5daa925a.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/champagne_POP.mp3"
+dest_files=[ "res://.import/champagne_POP.mp3-f15e1868ebd800f863d7cb9c5daa925a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
