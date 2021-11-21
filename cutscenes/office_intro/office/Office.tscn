@@ -22,16 +22,15 @@ colors = PoolColorArray( 0.149646, 0.0753212, 0.876465, 1, 0.0759373, 0.689707, 
 gradient = SubResource( 3 )
 
 [sub_resource type="ParticlesMaterial" id=5]
-lifetime_randomness = 0.27
 emission_shape = 2
 emission_box_extents = Vector3( 78.238, 1, 1 )
 flag_disable_z = true
 gravity = Vector3( 30, 140, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-damping = 47.67
-scale = 0.0
-scale_random = 0.12
+damping = 43.71
+scale = 0.01
+scale_random = 0.01
 color_ramp = SubResource( 4 )
 anim_speed = 8.93
 anim_speed_random = 0.23
@@ -182,8 +181,8 @@ animations = [ {
 modulate = Color( 0.290196, 0.290196, 0.290196, 1 )
 
 [node name="Outside" type="Sprite" parent="."]
-position = Vector2( 159.944, -14.4212 )
-scale = Vector2( 0.156077, 28.1133 )
+position = Vector2( 190.139, 63.7643 )
+scale = Vector2( 0.294718, 529.668 )
 texture = SubResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
@@ -217,8 +216,9 @@ shadow_enabled = true
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 150.522, -54.5572 )
 scale = Vector2( 2, 4 )
-amount = 100
-randomness = 0.35
+amount = 200
+lifetime = 0.75
+randomness = 0.6
 process_material = SubResource( 5 )
 texture = ExtResource( 7 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=1]
 [ext_resource path="res://game/Game.gd" type="Script" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://assets/audio/voice/tutorial/NewsApp.mp3" type="AudioStream" id=32]
 [ext_resource path="res://assets/audio/voice/tutorial/Tutorial1.mp3" type="AudioStream" id=33]
 [ext_resource path="res://assets/audio/voice/tutorial/ending.mp3" type="AudioStream" id=34]
+[ext_resource path="res://assets/visual/keyboard_buttons/E.png" type="Texture" id=35]
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -193,6 +194,30 @@ tracks/12/keys = {
 "update": 0,
 "values": [ Vector2( 35, 116 ) ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("SkipAdvice:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("ContinuousMusic:volume_db")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10.0 ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "enter"
@@ -320,7 +345,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 5.7, 69.5, 71.8 ),
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -332,7 +357,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 5.7, 69.5, 72 ),
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -344,7 +369,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 5.7, 69.5, 71.8 ),
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -356,7 +381,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 5.7, 69.5, 71.9 ),
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 0.819608, 0.211765, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -368,7 +393,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 5.7, 69.5, 72 ),
+"times": PoolRealArray( 0, 5.7, 69.5, 72.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 0.27451, 0.27451, 0.27451, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -457,6 +482,18 @@ tracks/13/keys = {
 "update": 0,
 "values": [ Vector2( 35, 116 ), Vector2( 35, 116 ), Vector2( 35, 34.037 ), Vector2( 35, 34.037 ), Vector2( 35, 116 ), Vector2( 35, 116 ), Vector2( 35, 34 ) ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("SkipAdvice:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 70.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=2]
 length = 60.0
@@ -526,6 +563,28 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
 
+[sub_resource type="DynamicFont" id=9]
+size = 8
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 35 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 35 )
+region = Rect2( 8, 0, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
 [node name="Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -537,10 +596,11 @@ __meta__ = {
 
 [node name="ContinuousMusic" parent="." instance=ExtResource( 21 )]
 stream = ExtResource( 12 )
+volume_db = -20.0
 music_name = "bahamas"
 
 [node name="Call" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 27 )
+stream = ExtResource( 24 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 5 )
@@ -847,6 +907,22 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SkipAdvice" type="Label" parent="."]
+visible = false
+margin_left = 244.414
+margin_top = 3.92893
+margin_right = 317.414
+margin_bottom = 9.92893
+custom_fonts/font = SubResource( 9 )
+text = "press     to skip"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EKey" type="AnimatedSprite" parent="SkipAdvice"]
+position = Vector2( 31.5136, 3.59975 )
+frames = SubResource( 12 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="Apps/Patents" to="." method="_on_Patents_pressed"]
