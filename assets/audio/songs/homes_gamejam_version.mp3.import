@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/homes_gamejam_version.mp3-aa67e78aa020fc0d51e59f207296be26.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/songs/homes_gamejam_version.mp3"
+dest_files=[ "res://.import/homes_gamejam_version.mp3-aa67e78aa020fc0d51e59f207296be26.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/plane.wav-59f82845fd237c5ba6ae54422c1bdd35.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/plane.wav"
+dest_files=[ "res://.import/plane.wav-59f82845fd237c5ba6ae54422c1bdd35.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

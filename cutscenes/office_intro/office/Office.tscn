@@ -191,6 +191,8 @@ texture = ExtResource( 6 )
 color = Color( 0.333333, 0.329412, 0.933333, 1 )
 energy = 1.09
 shadow_enabled = true
+shadow_filter = 4
+shadow_filter_smooth = 26.1
 
 [node name="Light2D2" type="Light2D" parent="."]
 position = Vector2( 263.321, -16.2482 )
@@ -198,6 +200,8 @@ texture = ExtResource( 6 )
 color = Color( 0.333333, 0.329412, 0.933333, 1 )
 energy = 0.97
 shadow_enabled = true
+shadow_filter = 4
+shadow_filter_smooth = 26.1
 
 [node name="Light2D3" type="Light2D" parent="."]
 position = Vector2( 102.812, -15.7185 )
@@ -205,6 +209,8 @@ texture = ExtResource( 6 )
 color = Color( 0.333333, 0.329412, 0.933333, 1 )
 energy = 1.09
 shadow_enabled = true
+shadow_filter = 4
+shadow_filter_smooth = 26.1
 
 [node name="Light2D4" type="Light2D" parent="."]
 position = Vector2( 183.034, -15.1888 )
@@ -212,6 +218,8 @@ texture = ExtResource( 6 )
 color = Color( 0.333333, 0.329412, 0.933333, 1 )
 energy = 1.09
 shadow_enabled = true
+shadow_filter = 4
+shadow_filter_smooth = 26.1
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 150.522, -54.5572 )

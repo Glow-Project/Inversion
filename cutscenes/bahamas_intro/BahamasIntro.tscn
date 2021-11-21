@@ -231,6 +231,7 @@ animations = [ {
 } ]
 
 [node name="BahamasIntro" type="Node2D"]
+modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 1 )
 music = ExtResource( 3 )
 
@@ -246,7 +247,6 @@ anims/into_banana = SubResource( 6 )
 [node name="BahamaImages" type="Node2D" parent="."]
 
 [node name="Bahamas1" type="Sprite" parent="BahamaImages"]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 161.073, 79.9147 )
 scale = Vector2( 1.07483, 0.83362 )
 texture = ExtResource( 4 )
@@ -258,6 +258,7 @@ scale = Vector2( 1.07109, 0.830011 )
 texture = ExtResource( 5 )
 
 [node name="Bahamas3" type="Sprite" parent="BahamaImages"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 161.435, 81.0117 )
 scale = Vector2( 4.86048, 3.19759 )
 texture = ExtResource( 6 )

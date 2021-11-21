@@ -1,40 +1,40 @@
 [gd_scene load_steps=48 format=2]
 
-[ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=1]
-[ext_resource path="res://game/Game.gd" type="Script" id=2]
-[ext_resource path="res://assets/visual/bay_3.png" type="Texture" id=3]
-[ext_resource path="res://assets/visual/lawsuit_hammer.png" type="Texture" id=4]
-[ext_resource path="res://assets/visual/SimpleBanana.png" type="Texture" id=5]
-[ext_resource path="res://assets/visual/bank_app.png" type="Texture" id=6]
-[ext_resource path="res://assets/visual/bay_1.png" type="Texture" id=7]
-[ext_resource path="res://assets/visual/bay_2.png" type="Texture" id=8]
-[ext_resource path="res://assets/visual/patent_app.png" type="Texture" id=9]
-[ext_resource path="res://assets/visual/apps/news_app_new_selected.png" type="Texture" id=10]
-[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=12]
-[ext_resource path="res://assets/visual/apps/patent_app_white.png" type="Texture" id=13]
-[ext_resource path="res://assets/visual/apps/lawsuit_hammer_selected.png" type="Texture" id=14]
-[ext_resource path="res://assets/visual/apps/news_app_new_normal.png" type="Texture" id=15]
-[ext_resource path="res://assets/visual/apps/bank_app_white.png" type="Texture" id=16]
-[ext_resource path="res://assets/visual/apps/news_app_new_disabled.png" type="Texture" id=17]
-[ext_resource path="res://assets/visual/apps/lawsuit_hammer_disabledl.png" type="Texture" id=18]
-[ext_resource path="res://assets/visual/apps/bank_app_deactivated.png" type="Texture" id=19]
-[ext_resource path="res://assets/visual/apps/patent_app_deactivated.png" type="Texture" id=20]
-[ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=21]
-[ext_resource path="res://components/mute_music/MuteMusic.tscn" type="PackedScene" id=22]
-[ext_resource path="res://assets/visual/ui/PatentApp.tres" type="TileSet" id=23]
-[ext_resource path="res://assets/audio/voice/tutorial/Skills.mp3" type="AudioStream" id=24]
-[ext_resource path="res://assets/visual/Other/light.png" type="Texture" id=25]
-[ext_resource path="res://assets/audio/voice/tutorial/Tutorial2FIXED.mp3" type="AudioStream" id=26]
+[ext_resource path="res://assets/visual/ui/PatentApp.tres" type="TileSet" id=1]
+[ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://components/mute_music/MuteMusic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/visual/fonts/Magero.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://game/Game.gd" type="Script" id=5]
+[ext_resource path="res://assets/visual/apps/news_app_new_disabled.png" type="Texture" id=6]
+[ext_resource path="res://assets/visual/apps/patent_app_deactivated.png" type="Texture" id=7]
+[ext_resource path="res://assets/visual/apps/lawsuit_hammer_disabledl.png" type="Texture" id=8]
+[ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=9]
+[ext_resource path="res://assets/visual/apps/bank_app_deactivated.png" type="Texture" id=10]
+[ext_resource path="res://assets/visual/bay_3.png" type="Texture" id=11]
+[ext_resource path="res://assets/visual/bay_2.png" type="Texture" id=12]
+[ext_resource path="res://assets/visual/bank_app.png" type="Texture" id=13]
+[ext_resource path="res://assets/visual/bay_4.png" type="Texture" id=14]
+[ext_resource path="res://assets/visual/SimpleBanana.png" type="Texture" id=15]
+[ext_resource path="res://assets/visual/lawsuit_hammer.png" type="Texture" id=16]
+[ext_resource path="res://assets/visual/bay_1.png" type="Texture" id=17]
+[ext_resource path="res://assets/visual/patent_app.png" type="Texture" id=18]
+[ext_resource path="res://assets/visual/apps/news_app_new_selected.png" type="Texture" id=19]
+[ext_resource path="res://assets/visual/apps/patent_app_white.png" type="Texture" id=20]
+[ext_resource path="res://assets/visual/apps/lawsuit_hammer_selected.png" type="Texture" id=21]
+[ext_resource path="res://assets/visual/apps/news_app_new_normal.png" type="Texture" id=22]
+[ext_resource path="res://assets/visual/apps/bank_app_white.png" type="Texture" id=23]
+[ext_resource path="res://assets/audio/voice/tutorial/Tutorial1.mp3" type="AudioStream" id=24]
+[ext_resource path="res://assets/audio/voice/tutorial/PatentApp.mp3" type="AudioStream" id=25]
+[ext_resource path="res://assets/audio/voice/tutorial/ShopApp.mp3" type="AudioStream" id=26]
 [ext_resource path="res://assets/audio/voice/tutorial/LawsuitApp.mp3" type="AudioStream" id=27]
-[ext_resource path="res://assets/audio/voice/tutorial/Balance.mp3" type="AudioStream" id=28]
-[ext_resource path="res://assets/audio/voice/tutorial/PatentApp.mp3" type="AudioStream" id=29]
-[ext_resource path="res://assets/audio/voice/tutorial/ShopApp.mp3" type="AudioStream" id=30]
-[ext_resource path="res://assets/audio/voice/tutorial/Arguments.mp3" type="AudioStream" id=31]
-[ext_resource path="res://assets/audio/voice/tutorial/NewsApp.mp3" type="AudioStream" id=32]
-[ext_resource path="res://assets/audio/voice/tutorial/Tutorial1.mp3" type="AudioStream" id=33]
+[ext_resource path="res://assets/audio/voice/tutorial/Arguments.mp3" type="AudioStream" id=28]
+[ext_resource path="res://assets/audio/voice/tutorial/Skills.mp3" type="AudioStream" id=29]
+[ext_resource path="res://assets/visual/keyboard_buttons/E.png" type="Texture" id=30]
+[ext_resource path="res://assets/audio/voice/tutorial/Tutorial2FIXED.mp3" type="AudioStream" id=31]
+[ext_resource path="res://assets/audio/voice/tutorial/Balance.mp3" type="AudioStream" id=32]
+[ext_resource path="res://assets/audio/voice/tutorial/NewsApp.mp3" type="AudioStream" id=33]
 [ext_resource path="res://assets/audio/voice/tutorial/ending.mp3" type="AudioStream" id=34]
-[ext_resource path="res://assets/visual/keyboard_buttons/E.png" type="Texture" id=35]
+[ext_resource path="res://assets/visual/Other/light.png" type="Texture" id=35]
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -298,23 +298,7 @@ tracks/1/keys = {
 "clips": [ {
 "end_offset": 0.698807,
 "start_offset": 0.0,
-"stream": ExtResource( 33 )
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource( 26 )
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource( 29 )
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource( 32 )
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource( 27 )
+"stream": ExtResource( 24 )
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -322,7 +306,15 @@ tracks/1/keys = {
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 30 )
+"stream": ExtResource( 25 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 33 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 27 )
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -330,7 +322,15 @@ tracks/1/keys = {
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource( 24 )
+"stream": ExtResource( 26 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 32 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 29 )
 }, {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -550,31 +550,31 @@ tracks/3/keys = {
 [sub_resource type="DynamicFont" id=3]
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 11 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 11 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 8
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 11 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=9]
 size = 8
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 11 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 35 )
+atlas = ExtResource( 30 )
 region = Rect2( 0, 0, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 35 )
+atlas = ExtResource( 30 )
 region = Rect2( 8, 0, 8, 8 )
 
 [sub_resource type="SpriteFrames" id=12]
@@ -588,19 +588,18 @@ animations = [ {
 [node name="Game" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="ContinuousMusic" parent="." instance=ExtResource( 21 )]
-stream = ExtResource( 12 )
-volume_db = -20.0
+[node name="ContinuousMusic" parent="." instance=ExtResource( 2 )]
+stream = ExtResource( 9 )
 music_name = "bahamas"
 
 [node name="Call" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 24 )
+stream = ExtResource( 29 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 5 )
@@ -617,28 +616,28 @@ anims/diashow = SubResource( 2 )
 [node name="Bahamas1" type="Sprite" parent="Background"]
 position = Vector2( 0, -0.464039 )
 scale = Vector2( 1.06834, 0.832715 )
-texture = ExtResource( 7 )
+texture = ExtResource( 17 )
 centered = false
 
 [node name="Bahamas2" type="Sprite" parent="Background"]
 modulate = Color( 0.85, 0.85, 0.85, 0 )
 position = Vector2( 0, -0.486136 )
 scale = Vector2( 1.0684, 0.831596 )
-texture = ExtResource( 8 )
+texture = ExtResource( 12 )
 centered = false
 
 [node name="Bahamas3" type="Sprite" parent="Background"]
 modulate = Color( 0.410345, 0.410345, 0.410345, 0 )
 position = Vector2( 0, -0.53033 )
 scale = Vector2( 4.78391, 3.14879 )
-texture = ExtResource( 3 )
+texture = ExtResource( 11 )
 centered = false
 
 [node name="Bahamas4" type="Sprite" parent="Background"]
 modulate = Color( 0.270455, 0.270455, 0.270455, 0 )
 position = Vector2( -0.533283, -0.608371 )
 scale = Vector2( 6.69366, 4.44876 )
-texture = ExtResource( 1 )
+texture = ExtResource( 14 )
 centered = false
 
 [node name="Titel" type="Label" parent="."]
@@ -661,7 +660,7 @@ __meta__ = {
 modulate = Color( 1, 0.819608, 0.211765, 1 )
 position = Vector2( 226.038, 19.3772 )
 scale = Vector2( 2.80219, 2.66035 )
-texture = ExtResource( 5 )
+texture = ExtResource( 15 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 160, 80 )
@@ -683,36 +682,36 @@ __meta__ = {
 [node name="Patents" type="TextureButton" parent="Apps"]
 margin_right = 16.0
 margin_bottom = 16.0
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 13 )
-texture_disabled = ExtResource( 20 )
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 20 )
+texture_disabled = ExtResource( 7 )
 
 [node name="News" type="TextureButton" parent="Apps"]
 margin_left = 20.0
 margin_right = 36.0
 margin_bottom = 16.0
-texture_normal = ExtResource( 15 )
-texture_hover = ExtResource( 10 )
-texture_disabled = ExtResource( 17 )
+texture_normal = ExtResource( 22 )
+texture_hover = ExtResource( 19 )
+texture_disabled = ExtResource( 6 )
 
 [node name="Lawsuits" type="TextureButton" parent="Apps"]
 margin_top = 20.0
 margin_right = 16.0
 margin_bottom = 36.0
-texture_normal = ExtResource( 4 )
-texture_hover = ExtResource( 14 )
-texture_disabled = ExtResource( 18 )
+texture_normal = ExtResource( 16 )
+texture_hover = ExtResource( 21 )
+texture_disabled = ExtResource( 8 )
 
 [node name="Shop" type="TextureButton" parent="Apps"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 36.0
 margin_bottom = 36.0
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 16 )
-texture_disabled = ExtResource( 19 )
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 23 )
+texture_disabled = ExtResource( 10 )
 
-[node name="MuteMusic" parent="." instance=ExtResource( 22 )]
+[node name="MuteMusic" parent="." instance=ExtResource( 3 )]
 margin_left = 251.521
 margin_top = 97.2992
 margin_right = -43.4787
@@ -723,7 +722,7 @@ rect_scale = Vector2( 3, 3 )
 modulate = Color( 0.164706, 0.803922, 1, 0.643137 )
 position = Vector2( 0, 0.5 )
 scale = Vector2( 0.99, 0.99 )
-tile_set = ExtResource( 23 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 196608, 0, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 196612, 1, 0, 262144, 6, 0, 262145, 11, 0, 262146, 11, 0, 262147, 11, 0, 262148, 7, 0, 327680, 4, 0, 327681, 10, 0, 327682, 10, 0, 327683, 10, 0, 327684, 5, 0, 393216, 6, 0, 393217, 11, 0, 393218, 11, 0, 393219, 11, 0, 393220, 7, 0, 458752, 6, 0, 458753, 11, 0, 458754, 11, 0, 458755, 11, 0, 458756, 7, 0, 524288, 6, 0, 524289, 11, 0, 524290, 11, 0, 524291, 11, 0, 524292, 7, 0, 589824, 2, 0, 589825, 9, 0, 589826, 9, 0, 589827, 9, 0, 589828, 3, 0 )
@@ -887,7 +886,7 @@ __meta__ = {
 [node name="Light" type="Light2D" parent="."]
 visible = false
 position = Vector2( 125.477, 70.662 )
-texture = ExtResource( 25 )
+texture = ExtResource( 35 )
 texture_scale = 0.25
 color = Color( 0.862745, 0.862745, 0.862745, 1 )
 energy = 0.0

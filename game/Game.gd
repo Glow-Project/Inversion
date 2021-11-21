@@ -46,6 +46,8 @@ func skill_chance_to_string(chance: float) -> String:
 			return "adept"
 		.4:
 			return "pro"
+		.5:
+			return "cheater"
 	return ""
 
 func _on_Patents_pressed():

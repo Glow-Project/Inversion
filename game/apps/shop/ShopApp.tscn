@@ -1,10 +1,54 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://game/apps/shop/ShopApp.gd" type="Script" id=1]
 [ext_resource path="res://assets/visual/exit_button.png" type="Texture" id=2]
 [ext_resource path="res://assets/visual/exit_button_white.png" type="Texture" id=3]
 [ext_resource path="res://assets/audio/songs/BahamaVibeMusic.mp3" type="AudioStream" id=4]
 [ext_resource path="res://components/continuous_music/ContinuousMusic.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Animation" id=2]
+resource_name = "RESET"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "go_bahama"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ContinuousMusic:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 2.9 ),
+"transitions": PoolRealArray( 4.2871, 1 ),
+"update": 0,
+"values": [ -10.0, -80.0 ]
+}
 
 [node name="ShopApp" type="Control"]
 anchor_right = 1.0
@@ -50,4 +94,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/go_bahama = SubResource( 1 )
+
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
