@@ -214,24 +214,23 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 10 )
 region = Rect2( 0, 0, 8, 8 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 10 )
 region = Rect2( 8, 0, 8, 8 )
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
 "name": "default",
 "speed": 2.0
 } ]
 
 [node name="BahamasIntro" type="Node2D"]
-modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 1 )
 music = ExtResource( 3 )
 
@@ -247,6 +246,7 @@ anims/into_banana = SubResource( 6 )
 [node name="BahamaImages" type="Node2D" parent="."]
 
 [node name="Bahamas1" type="Sprite" parent="BahamaImages"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 161.073, 79.9147 )
 scale = Vector2( 1.07483, 0.83362 )
 texture = ExtResource( 4 )
@@ -258,9 +258,8 @@ scale = Vector2( 1.07109, 0.830011 )
 texture = ExtResource( 5 )
 
 [node name="Bahamas3" type="Sprite" parent="BahamaImages"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 161.435, 79.6769 )
-scale = Vector2( 4.86048, 3.14524 )
+position = Vector2( 161.435, 81.0117 )
+scale = Vector2( 4.86048, 3.19759 )
 texture = ExtResource( 6 )
 
 [node name="Bahamas4" type="Sprite" parent="BahamaImages"]
@@ -295,6 +294,7 @@ visible = false
 position = Vector2( 295.317, 138.697 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 8 )
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

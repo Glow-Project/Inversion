@@ -84,25 +84,25 @@ animations = [ {
 atlas = ExtResource( 4 )
 region = Rect2( 32, 336, 32, 48 )
 
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 4 )
-region = Rect2( 224, 144, 32, 48 )
+region = Rect2( 128, 336, 32, 48 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 4 )
 region = Rect2( 320, 144, 32, 48 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 4 )
-region = Rect2( 128, 336, 32, 48 )
+region = Rect2( 128, 144, 32, 48 )
 
 [sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 4 )
 region = Rect2( 32, 144, 32, 48 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 4 )
-region = Rect2( 128, 144, 32, 48 )
+region = Rect2( 224, 144, 32, 48 )
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
@@ -111,9 +111,9 @@ animations = [ {
 "name": "P5",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 16 ) ],
+"frames": [ SubResource( 12 ) ],
 "loop": true,
-"name": "P3",
+"name": "P6",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ) ],
@@ -121,9 +121,9 @@ animations = [ {
 "name": "P4",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ) ],
+"frames": [ SubResource( 15 ) ],
 "loop": true,
-"name": "P6",
+"name": "P2",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 17 ) ],
@@ -131,9 +131,9 @@ animations = [ {
 "name": "P1",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 15 ) ],
+"frames": [ SubResource( 16 ) ],
 "loop": true,
-"name": "P2",
+"name": "P3",
 "speed": 5.0
 } ]
 

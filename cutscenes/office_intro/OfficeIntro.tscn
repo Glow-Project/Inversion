@@ -21,10 +21,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 9, 10, 19, 20, 21, 25.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 9, 9.01, 19, 19.01, 20, 21, 25.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 67.8788, 160.168 ), Vector2( 67.879, 34.33 ), Vector2( 241.635, 40 ), Vector2( 168.101, 40 ), Vector2( 164.317, 62.494 ), Vector2( 164.317, 62.494 ), Vector2( 164.948, 63.7553 ) ]
+"values": [ Vector2( 67.8788, 160.168 ), Vector2( 67.879, 34.33 ), Vector2( 241.635, 40 ), Vector2( 168.101, 40 ), Vector2( 164.317, 62.494 ), Vector2( 164.317, 62.494 ), Vector2( 164.317, 62.494 ), Vector2( 164.948, 63.7553 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Camera2D:zoom")
