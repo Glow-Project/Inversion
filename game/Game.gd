@@ -1,5 +1,7 @@
 extends Control
 
+var skip_scene: bool = false 
+
 func _ready():
 	# Start the diashow in the background
 	$Background.visible = true
@@ -16,8 +18,12 @@ func _ready():
 	sync_state()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("skip") and $AnimationPlayer.current_animation == "tutorial":
+	if (Input.is_action_just_pressed("skip") and $AnimationPlayer.current_animation == "tutorial") or skip_scene:
 		$AnimationPlayer.playback_speed = 50
+
+func _input(event):
+	if event is InputEventScreenTouch and $AnimationPlayer.current_animation == "tutorial":
+		skip_scene = true	
 
 func sync_state():
 	$Apps/Lawsuits.disabled = global.selected_invention == null
