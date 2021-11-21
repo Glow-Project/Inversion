@@ -705,11 +705,11 @@ __meta__ = {
 }
 
 [node name="Charisma" type="Label" parent="Skills"]
-margin_left = 34.0
-margin_top = 98.0
-margin_right = 122.0
-margin_bottom = 111.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 36.3978
+margin_top = 117.638
+margin_right = 124.398
+margin_bottom = 130.638
+rect_scale = Vector2( 0.45, 0.45 )
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -728,18 +728,18 @@ margin_bottom = 13.4158
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "0.4"
+text = "intern"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Shape" type="Label" parent="Skills"]
-margin_left = 49.4338
-margin_top = 108.554
-margin_right = 107.434
-margin_bottom = 119.554
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 49.1083
+margin_top = 108.021
+margin_right = 107.109
+margin_bottom = 119.021
+rect_scale = Vector2( 0.45, 0.45 )
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -758,18 +758,18 @@ margin_bottom = 12.9438
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "0.4"
+text = "intern"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Color" type="Label" parent="Skills"]
-margin_left = 49.2072
-margin_top = 118.724
-margin_right = 107.207
-margin_bottom = 129.724
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 48.7861
+margin_top = 98.4114
+margin_right = 106.786
+margin_bottom = 109.411
+rect_scale = Vector2( 0.45, 0.45 )
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -788,18 +788,18 @@ margin_bottom = 12.4719
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "0.4"
+text = "intern"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Function" type="Label" parent="Skills"]
-margin_left = 34.0
-margin_top = 128.0
-margin_right = 122.0
-margin_bottom = 139.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 35.5049
+margin_top = 127.644
+margin_right = 123.505
+margin_bottom = 138.644
+rect_scale = Vector2( 0.45, 0.45 )
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -818,7 +818,7 @@ margin_bottom = 13.4158
 rect_pivot_offset = Vector2( -56.3383, 27.4711 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "0.4"
+text = "intern"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

@@ -23,10 +23,24 @@ func sync_state():
 	$Apps/Lawsuits.disabled = global.selected_invention == null
 	$Money.text = "$ %d" % bank_account.current_money
 	
-	$Skills/Charisma/Value.text = "%.1f" % skills.charisma
-	$Skills/Shape/Value.text = "%.1f" % skills.shape
-	$Skills/Color/Value.text = "%.1f" % skills.color
-	$Skills/Function/Value.text = "%.1f" % skills.function
+	$Skills/Charisma/Value.text = skill_chance_to_string(skills.charisma)
+	$Skills/Shape/Value.text = skill_chance_to_string(skills.shape)
+	$Skills/Color/Value.text = skill_chance_to_string(skills.color)
+	$Skills/Function/Value.text = skill_chance_to_string(skills.function)
+
+func skill_chance_to_string(chance: float) -> String:
+	match chance:
+		.0:
+			return "newbie"
+		.1:
+			return "intern"
+		.2:
+			return "novice"
+		.3:
+			return "adept"
+		.4:
+			return "pro"
+	return ""
 
 func _on_Patents_pressed():
 	if !$AnimationPlayer.is_playing():

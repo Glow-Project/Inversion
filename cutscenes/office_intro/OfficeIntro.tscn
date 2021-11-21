@@ -188,14 +188,6 @@ tracks/12/keys = {
 } ]
 }
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 7 )
-region = Rect2( 176, 136, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 7 )
-region = Rect2( 192, 136, 16, 17 )
-
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 7 )
 region = Rect2( 144, 136, 16, 17 )
@@ -204,11 +196,19 @@ region = Rect2( 144, 136, 16, 17 )
 atlas = ExtResource( 7 )
 region = Rect2( 160, 136, 16, 17 )
 
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 7 )
+region = Rect2( 176, 136, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 136, 16, 17 )
+
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 4 ), SubResource( 5 ) ],
-"loop": true,
-"name": "angry",
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": false,
+"name": "init_angry",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
@@ -216,9 +216,9 @@ animations = [ {
 "name": "sad",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
-"loop": false,
-"name": "init_angry",
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "angry",
 "speed": 5.0
 } ]
 
