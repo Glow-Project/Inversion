@@ -18,14 +18,22 @@ func _ready():
 	
 	$Invention_2.texture = invention2.draft
 	$Invention_2/InventionLabel2.text = invention2.name
+	
+	if global.selected_invention != null:
+		if global.selected_invention == invention1:
+			$Invention_1/SelectButton1.text = ">SELECT"
+		elif global.selected_invention == invention2:
+			$Invention_2/Sue2.text = ">SELECT"
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://game/Game.tscn")
 
 func _on_SelectButton1_pressed():
+	$Invention_1/SelectButton1.text = ">SELECT"
+	$Invention_2/Sue2.text = "SELECT"
 	global.selected_invention = invention1
-	print(global.selected_invention.name)
 
 func _on_Sue2_pressed():
+	$Invention_2/Sue2.text = ">SELECT"
+	$Invention_1/SelectButton1.text = "SELECT"
 	global.selected_invention = invention2
-	print(global.selected_invention.name)
