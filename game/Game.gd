@@ -23,7 +23,7 @@ func _process(_delta):
 
 func _input(event):
 	if event is InputEventScreenTouch and $AnimationPlayer.current_animation == "tutorial":
-		skip_scene = true	
+		skip_scene = true
 
 func sync_state():
 	$Apps/Lawsuits.disabled = global.selected_invention == null

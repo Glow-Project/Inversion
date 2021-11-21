@@ -206,6 +206,18 @@ tracks/13/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("ContinuousMusic:volume_db")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10.0 ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "enter"
@@ -588,7 +600,7 @@ volume_db = -20.0
 music_name = "bahamas"
 
 [node name="Call" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 34 )
+stream = ExtResource( 24 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 5 )
