@@ -51,7 +51,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "intro"
-length = 16.0
+length = 14.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("GodotWildJamBig:modulate")
 tracks/0/interp = 1
@@ -95,7 +95,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.1, 10, 11, 14, 15.1 ),
+"times": PoolRealArray( 0.1, 8.6, 9.6, 12.6, 13.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -107,7 +107,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 9.9, 12, 12.4 ),
+"times": PoolRealArray( 8.5, 10.6, 11 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 0 ]
@@ -132,7 +132,7 @@ tracks/5/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 9 )
 } ],
-"times": PoolRealArray( 12, 13.6, 14.8 )
+"times": PoolRealArray( 10.6, 12.2, 13.4 )
 }
 tracks/6/type = "method"
 tracks/6/path = NodePath("ContinuousMusic")
@@ -141,7 +141,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 12.5 ),
+"times": PoolRealArray( 10.7 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -155,7 +155,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 12, 12.6, 13.6, 16 ),
+"times": PoolRealArray( 10.6, 11.2, 12.2, 14.6 ),
 "transitions": PoolRealArray( 1, 1, 0.707107, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, -60.0, -30.0 ]
@@ -167,7 +167,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 12, 12.6, 13.6 ),
+"times": PoolRealArray( 10.6, 11.2, 12.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.46 ]
@@ -250,8 +250,8 @@ frames = SubResource( 5 )
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
-volume_db = -30.0
-pitch_scale = 0.46
+volume_db = -18.0
+pitch_scale = 0.838
 
 [node name="ContinuousMusic" parent="." instance=ExtResource( 7 )]
 stream = ExtResource( 8 )
