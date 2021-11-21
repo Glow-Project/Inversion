@@ -54,7 +54,7 @@ config/icon="res://assets/visual/Other/BahamaBananaType2.png"
 [autoload]
 
 settings="*res://scripts/InitSettings.gd"
-global="*res://assets/audio/Global.gd"
+global="*res://scripts/Global.gd"
 invention_collection="*res://entities/invention_collection/InventionCollection.tscn"
 patent_collection="*res://entities/patent_collection/PatentCollection.tscn"
 bank_account="*res://scripts/BankAccount.gd"

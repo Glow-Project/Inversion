@@ -17,7 +17,8 @@ func sync_state():
 		patent_article.connect("bought", self, "bought")
 		$Items.add_child(patent_article)
 
-func bought():
+func bought(patent: Patent):
+	global.append_new_inventions(patent)
 	global.regenerate_inventions()
 	get_tree().change_scene("res://game/apps/skilling/Skilling.tscn")
 
