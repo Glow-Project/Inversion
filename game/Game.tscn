@@ -664,7 +664,6 @@ texture = ExtResource( 15 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 160, 80 )
-current = true
 
 [node name="Apps" type="GridContainer" parent="."]
 anchor_top = -9.53674e-08
